@@ -6,7 +6,6 @@ const Banner = () => {
         <div className='background'>
             <div className='find'>
             <small>FIND YOUR DREAM CAR</small>
-            <p>Hello</p>
             <h2>LAMBORGINI AVENTADOR</h2>
             <h2>LP750 4SV</h2>
             <p>MODEL 2016<span>  $486.868</span></p>

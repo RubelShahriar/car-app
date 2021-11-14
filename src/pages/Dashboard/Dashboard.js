@@ -123,7 +123,7 @@ function Dashboard(props) {
         <Switch>
         <Route exact path={path}>
           <h1>Wellcome to Your Dashboard</h1>
-          <h1>Please check:</h1>
+          <h1>please check with this Email:</h1>
           <h4>Email: admin@admin1@gmail.com &&  Pass: 123456</h4>
           <h4>Email: admin@admin1@gmail.com &&  Pass: 123456</h4>
         </Route>
