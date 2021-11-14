@@ -19,7 +19,7 @@ const AddProduct = () => {
         const packageInfo = {image, place, name, displayName, email, amount, description};
 
         
-        fetch('http://localhost:4000/cars', { 
+        fetch('https://tranquil-hollows-86813.herokuapp.com/cars', { 
             method: 'post',
             headers:{
                 'content-type': 'application/json'

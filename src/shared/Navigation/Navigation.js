@@ -34,8 +34,6 @@ const Navigation = () => {
             </Typography>
             <Link to='/' className='nav-item'>Home</Link>
             <Link to='/' className='nav-item'>Services</Link>
-            <Link to='/' className='nav-item'>Pages</Link>
-            <Link to='/' className='nav-item'>Contact</Link>
             <Link to='/all-products' className='nav-item'>Products</Link>
             <Link to='/dashboard' className='nav-item'>Dashboard</Link>
             {

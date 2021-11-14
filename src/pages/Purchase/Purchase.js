@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
@@ -15,7 +16,7 @@ const Purchase = () => {
     
 
     useEffect(() => {
-        const url = `http://localhost:4000/cars/${id}`;
+        const url = `https://tranquil-hollows-86813.herokuapp.com/cars/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setCarInfo(data));
@@ -24,7 +25,7 @@ const Purchase = () => {
     const handlePlaceOrder = e => {
         const packageInfo = {name, image, place, displayName, email, description, amount, dateString};
 
-        fetch('http://localhost:4000/orders', { 
+        fetch('https://tranquil-hollows-86813.herokuapp.com/orders', { 
             method: 'post',
             headers:{
                 'content-type': 'application/json'
@@ -42,7 +43,8 @@ const Purchase = () => {
     }
 
     return (
-        <div className='purchase'>
+        <Container>
+            <div className='purchase'>
             <div className='place-order'><h2>Place an Order</h2></div>
             <div className='flex'>
                 <div className='left'>
@@ -55,6 +57,7 @@ const Purchase = () => {
                     <button>We hope that you found your Dream car</button>
                 </div>
                 <div className='right'>
+                    <h3>Book Your Order</h3>
                     <form onSubmit= {handlePlaceOrder}>
                         <input type='text' defaultValue={displayName}></input>
                         <input type='text' defaultValue={email}></input>
@@ -69,6 +72,7 @@ const Purchase = () => {
                 </div>
             </div>
         </div>
+        </Container>
     );
 };
 

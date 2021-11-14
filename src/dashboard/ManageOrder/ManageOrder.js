@@ -4,13 +4,13 @@ const ManageOrder = () => {
     const [order, setOrder] = useState([]);
     const {name}  = order;
     useEffect(() => {
-        fetch('http://localhost:4000/orders')
+        fetch('https://tranquil-hollows-86813.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setOrder(data))
     }, [])
     return (
         <div>
-            <h2>ManageOrder{order.length}</h2>
+            <h2>ManageOrder</h2>
 
         </div>
     );

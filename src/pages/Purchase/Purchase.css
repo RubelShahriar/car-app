@@ -1,6 +1,3 @@
-.purchase{
-
-}
 .purchase .place-order{
     text-align: center;
 }
@@ -9,7 +6,6 @@
 }
 .purchase .flex .left{
     width: 60%;
-    /* background: rgb(0, 255, 34); */
 }
 .purchase .flex .left img{
     width: 80%;
@@ -18,7 +14,6 @@
 .purchase .flex .right{
     width: 40%;
     margin-top: 60px;
-    /* background: yellow; */
 }
 .purchase .right input{
     display: block;
@@ -43,4 +38,36 @@
     border: none;
     background: red;
     color: white;
+}
+
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .purchase .flex{
+        flex-wrap: wrap;
+    }
+    .purchase .flex .left{
+        width: 100%;
+    }
+    .purchase .flex .right{
+        width: 100%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .purchase .flex{
+        flex-wrap: wrap;
+    }
+    .purchase .flex .left{
+        width: 100%;
+    }
+    .purchase .flex .right{
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .purchase .flex .left{
+        width: 60%;
+    }
+    .purchase .flex .right{
+        width: 40%;
+    }
 }

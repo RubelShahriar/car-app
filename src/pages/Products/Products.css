@@ -44,3 +44,20 @@
     background: #f3868f;
     transition: .4s;
 }
+
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .products .display .item{
+        width: 100%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .products .display .item{
+        width: 45%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .products .display .item{
+        width: 31%;
+    }
+}

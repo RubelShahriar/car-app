@@ -122,9 +122,8 @@ function Dashboard(props) {
         <Toolbar />
         <Switch>
         <Route exact path={path}>
-          <h1>Please! use this email and pass to check. i have made a mistake</h1>
-          <h4>Email: admin@admin1@gmail.com &&  Pass: 123456</h4>
-          <h4>Email: admin@admin1@gmail.com &&  Pass: 123456</h4>
+          <h1>Wellcome to Your Dashboard</h1>
+          <h1>Please check:</h1>
           <h4>Email: admin@admin1@gmail.com &&  Pass: 123456</h4>
           <h4>Email: admin@admin1@gmail.com &&  Pass: 123456</h4>
         </Route>

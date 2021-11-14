@@ -7,7 +7,7 @@ const MyOrders = () => {
     const [packages, setPackages] = useState([]);
     const {user} = useAuth();
     useEffect(() => {
-        fetch(`http://localhost:4000/orders?email=${user.email}`)
+        fetch(`https://tranquil-hollows-86813.herokuapp.com/orders?email=${user.email}`)
         .then(res => res.json())
         .then(data => setPackages(data))
     }, [])
@@ -15,7 +15,7 @@ const MyOrders = () => {
     const handleDeleteOrder = id => {
         const confirmation = window.confirm('Are you sure, you want to delete this order?')
         if(confirmation){
-            const url = `http://localhost:4000/orders/${id}`;
+            const url = `https://tranquil-hollows-86813.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'delete'
             })

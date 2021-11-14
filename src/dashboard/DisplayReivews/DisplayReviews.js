@@ -7,7 +7,7 @@ import './DisplayReviews.css';
 const DisplayReviews = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/reviews')
+        fetch('https://tranquil-hollows-86813.herokuapp.com/reviews')
         .then(res => res.json())
         .then(data => setPackages(data))
     }, [])

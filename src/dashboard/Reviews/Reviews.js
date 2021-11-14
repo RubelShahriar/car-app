@@ -14,7 +14,7 @@ const Reviews = () => {
         const review = reviewRef.current.value;
         const packageInfo = { displayName, email, rating, review, dateString};
 
-        fetch('http://localhost:4000/reviews', { 
+        fetch('https://tranquil-hollows-86813.herokuapp.com/reviews', { 
             method: 'post',
             headers:{
                 'content-type': 'application/json'

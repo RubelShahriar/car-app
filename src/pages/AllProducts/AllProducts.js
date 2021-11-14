@@ -1,17 +1,18 @@
 import { LocationOn } from '@mui/icons-material';
-import { Button } from '@mui/material';
+import { Button, Container } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './AllProducts.css';
 const AllProducts = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/cars')
+        fetch('https://tranquil-hollows-86813.herokuapp.com/cars')
         .then(res => res.json())
         .then(data => setPackages(data))
     }, [])
     return (
-        <div className='all-products'>
+        <Container>
+            <div className='all-products'>
             <div className='latest'><h2>All Products</h2></div>
             <div className='display'>
             {
@@ -30,6 +31,7 @@ const AllProducts = () => {
             }
             </div>
         </div>
+        </Container>
     );
 };
 
