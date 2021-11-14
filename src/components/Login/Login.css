@@ -1,0 +1,15 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login h2{
+    margin-top: 100px;
+    margin-bottom: -80px;
+}
+.login .heading{
+    text-align: center;
+}
+.login .display{
+    margin-bottom: 20px;
+}

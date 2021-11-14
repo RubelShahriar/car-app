@@ -1,0 +1,15 @@
+.notfound{
+    text-align: center;
+}
+.notfound img{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+.notfound h2{
+    display: inline-block;
+    color: white;
+    background: red;
+    padding: 10px 25px;
+    border-radius: 10px;
+}

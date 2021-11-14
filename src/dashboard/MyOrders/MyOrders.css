@@ -1,0 +1,33 @@
+.my-orders{
+}
+.my-orders .flex{
+    display: flex;
+    justify-content: space-between;
+}
+.my-orders .flex .item{
+    width: 30%;
+}
+.my-orders .flex .item .image img{
+    width: 100%;
+    height: 200px;
+}
+.my-orders .flex .item h4{
+    margin-bottom: -10px;
+}
+.my-orders .flex .item .location{
+    margin-bottom: -6px;
+}
+.my-orders .flex .item .price{
+    background: red;
+    padding: 4px 10px;
+    color: white;
+}
+.my-orders .flex .item button{
+    background: red;
+    padding: 8px 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+}

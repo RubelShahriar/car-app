@@ -1,0 +1,21 @@
+.reviews{
+    margin: 60px 0px;
+}
+.reviews .center{
+    text-align: center;
+    margin: 40px 0px;
+}
+.reviews .review-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.reviews .reviews-item{
+    border: 1px solid gainsboro;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    width: 45%;
+}
+.reviews .reviews-item .inner-flex .star{
+    color: #ffc107;
+}

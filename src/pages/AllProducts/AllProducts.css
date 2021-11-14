@@ -1,0 +1,47 @@
+.all-products .latest{
+    text-align: center;
+}
+.all-products .display .item{
+    width: 31%;
+    margin-right: 20px;
+    box-shadow: 1px 1px 20px 15px rgba(0, 0, 0, .1);
+    margin-bottom: 20px;
+}
+.all-products .display .item h3{
+    font-size: 20px;
+    margin-bottom: -10px;
+}
+.all-products .display{
+    display: flex;
+    flex-wrap: wrap;
+}
+.all-products .display .item .image img{
+    width: 100%;
+    height: 250px;
+}
+.all-products .display .item .car-info{
+    padding: 15px;
+}
+.all-products .display .item .car-info .icon{
+    margin-bottom: -5px;
+    color: red;
+}
+.all-products .display .item .car-info span{
+    background-color: red;
+    color: white;
+    padding: 4px 10px;
+}
+.all-products .display .item .car-info button{
+    background: red;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.all-products .display .item .car-info button:hover{
+    background: #f3868f;
+    transition: .4s;
+}

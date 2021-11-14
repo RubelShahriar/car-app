@@ -1,0 +1,16 @@
+.resister{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resister h2{
+    margin-top: 40px;
+    margin-bottom: -80px;
+}
+.resister .center{
+    text-align: center;
+}
+
+.resister .short{
+    display: inline-block;
+}

@@ -1,0 +1,46 @@
+.purchase{
+
+}
+.purchase .place-order{
+    text-align: center;
+}
+.purchase .flex{
+    display: flex;
+}
+.purchase .flex .left{
+    width: 60%;
+    /* background: rgb(0, 255, 34); */
+}
+.purchase .flex .left img{
+    width: 80%;
+    height: 350px;
+}
+.purchase .flex .right{
+    width: 40%;
+    margin-top: 60px;
+    /* background: yellow; */
+}
+.purchase .right input{
+    display: block;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.purchase .left button{
+    display: block;
+    width: 306px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: none;
+    background: red;
+    color: white;
+}
+.purchase .right button{
+    display: block;
+    width: 306px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: none;
+    background: red;
+    color: white;
+}

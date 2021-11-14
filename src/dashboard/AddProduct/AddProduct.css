@@ -1,0 +1,25 @@
+.add-package .add-product{
+    text-align: center;
+}
+.add-package{
+    background: url('') no-repeat center;
+    background-size: cover;
+    padding: 30px 0px;
+}
+.add-package input{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: teal;
+    padding: 5px 10px;
+}
+.add-package .submit{
+    background: #1976d2;
+    color: white;
+    font-size: 25px;
+    border-radius: 20px;
+    font-weight: 500;
+} 

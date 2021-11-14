@@ -1,0 +1,53 @@
+.background{
+    background: url('../images/super-car-1.jpeg') no-repeat center;
+    background-size: cover;
+    padding: 160px 0px;
+}
+.background .find{
+    margin-left: 160px;
+}
+.background small{
+    color: red;
+    margin-bottom: -10px;
+}
+.background h2{
+    color: white;
+    margin-bottom: -10px;
+}
+.background p{
+    color: white;
+    padding-top: 10px;
+}
+.background span{
+    color: red;
+    padding-top: 10px;
+}
+.background .text{
+    width: 500px;
+}
+
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .background{
+        padding: 80px 0px;
+    }
+    .background .find{
+        margin-left: 40px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .background{
+        padding: 120px 0px;
+    }
+    .background .find{
+        margin-left: 40px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .background{
+        padding: 140px 0px;
+    }
+    .background .find{
+        margin-left: 140px;
+    }
+}

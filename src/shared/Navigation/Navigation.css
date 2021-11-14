@@ -1,0 +1,41 @@
+.navigation{
+    background: white !important;
+}
+.navigation .menu-icon{
+    display: none;
+}
+.navigation img{
+    width: 200px;
+}
+.navigation .nav-item{
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .news-flex .item{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .news-flex{
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .news-flex .item{
+        width: 48%;
+        margin-bottom: 20px;
+    }
+    .news-flex{
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .news-flex .item{
+        width: 31%;
+    }
+}

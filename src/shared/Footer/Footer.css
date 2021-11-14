@@ -1,0 +1,130 @@
+.footer{
+    background: black;
+    color: white;
+    padding: 50px 0px;
+}
+.footer .flex {
+    display: flex;
+    justify-content: space-between;
+}
+.footer .flex .logo{
+    width: 28%;
+}
+.footer .flex .logo .icon{
+    color: black;
+    background: white;
+    margin-right: 10px;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.footer .flex .logo .icon:hover{
+    cursor: pointer;
+    background: #ffb400;
+    color: white;
+    transition: .4s;
+}
+.footer .flex .contact{
+    width: 24%;
+}
+.footer .flex .contact .inner p{
+    margin-left: 25px;
+}
+.footer .flex .contact .inner{
+    position: relative;
+    margin-bottom: 20px;
+}
+.footer .flex .contact .inner .inner-icon{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.footer .flex .links{
+    width: 20%;
+    padding-left: 30px;
+}
+.footer .flex .links ul{
+    padding-left: 0px;
+}
+.footer .flex .links ul li{
+    margin-bottom: 10px;
+    font-size: 15px;
+    list-style: none;
+}
+.footer .flex .links ul li:hover{
+    margin-left: 5px;
+    transition: .4s;
+    color: #ffb400;
+}
+.footer .flex .subscribe{
+    width: 24%;
+}
+.footer .flex .subscribe .input{
+    width: 75%;
+    background: white;
+    padding: 2px;
+    border-radius: 2px;
+}
+.footer .flex .subscribe p{
+    margin-bottom: 20px;
+}
+.footer .flex .subscribe .button{
+    background: #ffb400;
+    color: white;
+    margin-top: -2px;
+}
+
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .footer .flex {
+        flex-wrap: wrap;
+    }
+    .footer .flex .logo{
+        width: 50%;
+    }
+    .footer .flex .contact{
+        width: 45%;
+    }
+    .footer .flex .links{
+        width: 40%;
+        padding-left: 30px;
+    }
+    .footer .flex .subscribe{
+        width: 50%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .footer .flex {
+        flex-wrap: wrap;
+    }
+    .footer .flex .logo{
+        width: 50%;
+    }
+    .footer .flex .contact{
+        width: 45%;
+    }
+    .footer .flex .links{
+        width: 40%;
+        padding-left: 30px;
+    }
+    .footer .flex .subscribe{
+        width: 50%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .footer .flex .logo{
+        width: 28%;
+    }
+    .footer .flex .contact{
+        width: 24%;
+    }
+    .footer .flex .links{
+        width: 20%;
+        padding-left: 30px;
+    }
+    .footer .flex .subscribe{
+        width: 24%;
+    }
+}
