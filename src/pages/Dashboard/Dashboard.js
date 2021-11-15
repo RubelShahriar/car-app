@@ -43,12 +43,12 @@ function Dashboard(props) {
       <Toolbar />
       <Divider />
       {admin && <Box>
-        <Link className='dashboard-link' to={`${url}/make-admin`}><button>Make Admin</button></Link>
         <Link className='dashboard-link' to={`${url}/add-product`}><button>Add Product</button></Link>
-      <Link className='dashboard-link' to={`${url}/pay`}><button>Payment</button></Link>
+      <Link className='dashboard-link' to={`${url}/manage-order`}><button>Manage all Order</button></Link>
+        <Link className='dashboard-link' to={`${url}/make-admin`}><button>Make Admin</button></Link>
         </Box>}
+      <Link className='dashboard-link' to={`${url}/pay`}><button>Payment</button></Link>
         <Link className='dashboard-link' to={`${url}/my-orders`}><button >My Order</button></Link>
-      <Link className='dashboard-link' to={`${url}/manage-order`}><button>Manage Order</button></Link>
       <Link className='dashboard-link' to={`${url}/reviews`}><button>Reviews</button></Link>
       {user.email && <Link className='dashboard-link' to={''}><button onClick={logout}>Logout</button></Link>}
       <Divider />
@@ -123,9 +123,6 @@ function Dashboard(props) {
         <Switch>
         <Route exact path={path}>
           <h1>Wellcome to Your Dashboard</h1>
-          <h1>please check with this Email:</h1>
-          <h4>Email: admin@admin1@gmail.com &&  Pass: 123456</h4>
-          <h4>Email: admin@admin1@gmail.com &&  Pass: 123456</h4>
         </Route>
         <Route exact path={`${path}/make-admin`}>
           <MakeAdmin></MakeAdmin>
