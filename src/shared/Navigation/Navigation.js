@@ -10,8 +10,6 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../components/images/car-logo-car-leader.svg';
 import './Navigation.css';
-import { Container } from '@mui/material';
-import { PermIdentityOutlined } from '@mui/icons-material';
 
 const Navigation = () => {
   const {user, logout} = useAuth();
@@ -33,7 +31,6 @@ const Navigation = () => {
              <img src={logo} alt=''></img>
             </Typography>
             <Link to='/' className='nav-item'>Home</Link>
-            <Link to='/' className='nav-item'>Services</Link>
             <Link to='/all-products' className='nav-item'>Products</Link>
             <Link to='/dashboard' className='nav-item'>Dashboard</Link>
             {

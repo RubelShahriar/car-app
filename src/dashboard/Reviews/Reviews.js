@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
 import './Reviews.css';
 import useAuth from '../../hooks/useAuth';
+import image from '../../components/images/dash-img.jpeg'
 
 const Reviews = () => {
     const {user} = useAuth();
     const {displayName, email} = user;
-    const date  = new Date;
+    const date  = new Date; 
     const dateString = date.toLocaleDateString();
     const ratingRef= useRef();
     const reviewRef= useRef();
@@ -24,7 +25,7 @@ const Reviews = () => {
         .then(res => res.json())
         .then(data => {
             if(data.insertedId){
-                alert('Package Added Successfully')
+                alert('Review Added Successfully')
                 e.target.reset();
             }
         })
@@ -32,16 +33,23 @@ const Reviews = () => {
     }
 
     return (
-        <div className='reviews'>
-            <h3>Review this product</h3>
-            <div>
-                <form onSubmit={handleAddReview}>
-                    <input type='text' defaultValue={displayName}></input>
-                    <input type='text' defaultValue={email}></input>
-                    <input type='number' placeholder='Enter rating number 1 to 5' ref={ratingRef}></input>
-                    <textarea placeholder='Write your reviews' ref={reviewRef}></textarea>
-                    <button type='submit'>Add Review</button>
-                </form>
+        <div className='review'>
+            <div className='image'>
+                <img src={image} alt='img'></img>
+            </div>
+            <div className='reviews'>
+                <div className='title'>
+                    <h2>Review a product</h2>
+                </div>
+                <div className='flex-review'>
+                    <form onSubmit={handleAddReview}>
+                        <input type='text' placeholder='Your Name' defaultValue={displayName}></input>
+                        <input type='text' placeholder='Your Email' defaultValue={email}></input>
+                        <input type='number' placeholder='Enter rating number 1' ref={ratingRef}></input>
+                        <textarea placeholder='Write your reviews' ref={reviewRef}></textarea>
+                        <button type='submit'>Add Review</button>
+                    </form>
+                </div>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import useAuth from '../../hooks/useAuth';
 import './AddProduct.css';
-
+import image from '../../components/images/add-product-dashboard.jpeg'
 const AddProduct = () => {
     const {user} = useAuth();
     const {displayName, email} = user;
@@ -36,17 +36,22 @@ const AddProduct = () => {
         e.preventDefault();
     }
     return (
-        <div className='add-package'>
-            <div className='add-product'><h2>Add new Product</h2></div>
-            <form onSubmit={handleAddPackage}>
-                <input type="url" placeholder="Enter Image URL" ref={imageRef}></input>
-                <input type="text" placeholder="Enter Name" ref={nameRef}></input>
-                <input type="text" placeholder="Enter Place" ref={placeRef}></input>
-                <input type="text" placeholder="Enter Amount" ref={amountRef}></input>
-                <input type="text" placeholder="Enter Description" ref={descriptionRef}></input>
-                <input type="submit" className='submit' value="Add Product"></input>
-            </form>
-       </div>
+        <div className='flex'>
+            <div className='image'>
+                <img src={image} alt='img'></img>
+            </div>
+            <div className='add-product'>
+                <div><h2>Add Product to Homepage</h2></div>
+                    <form onSubmit={handleAddPackage}>
+                        <input type="url" placeholder="Enter Image URL" ref={imageRef}></input>
+                        <input type="text" placeholder="Enter Name" ref={nameRef}></input>
+                        <input type="text" placeholder="Enter Place" ref={placeRef}></input>
+                        <input type="text" placeholder="Enter Amount" ref={amountRef}></input>
+                        <input type="text" placeholder="Enter Description" ref={descriptionRef}></input>
+                        <input type="submit" className='submit' value="Add Product"></input>
+                    </form>
+            </div>
+        </div>
     );
 };
 

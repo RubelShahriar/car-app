@@ -28,13 +28,17 @@ const MakeAdmin = () => {
         e.preventDefault();
     }
     return (
-        <div className='make-admin'>
-            <h3>Make An Admin</h3>
-            <form onSubmit={handleOnsubmit}>
-                <input type='email' onBlur={getValueFromInput} placeholder='Enter a email'></input>
-                <button type='submit'>Make Admin</button>
-            </form>
-            {success && <Alert severity="success">made admin successfully — check it out!</Alert>}
+        <div className='admin-flex'>
+            <div className='admin-image'>
+            </div>
+            <div className='make-admin'>
+                <h3>Make An Admin</h3>
+                <form onSubmit={handleOnsubmit}>
+                    <input type='email' onBlur={getValueFromInput} placeholder='Enter a email'></input>
+                    <button type='submit'>Make Admin</button>
+                </form>
+                {success && <Alert severity="success">made admin successfully — check it out!</Alert>}
+            </div>
         </div>
     );
 };

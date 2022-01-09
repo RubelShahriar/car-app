@@ -19,12 +19,14 @@ import Typography from '@mui/material/Typography';
 import MakeAdmin from '../../dashboard/MakeAdmin/MakeAdmin';
 import AddProduct from '../../dashboard/AddProduct/AddProduct';
 import MyOrders from '../../dashboard/MyOrders/MyOrders';
-import { Button, Container } from '@mui/material';
+import {Container } from '@mui/material';
 import Reviews from '../../dashboard/Reviews/Reviews';
 import useAuth from '../../hooks/useAuth';
 import './Dashboard.css';
 import ManageOrder from '../../dashboard/ManageOrder/ManageOrder';
 import Payment from '../../dashboard/Payment/Payment';
+import Home from '../Home/Home'
+
 
 const drawerWidth = 200;
 
@@ -41,17 +43,19 @@ function Dashboard(props) {
   const drawer = (
     <div>
       <Toolbar />
-      <Divider />
+      {/* <Divider /> */}
+        <Link className='dashboard-link' to={`/home`}><button>Back to Home</button></Link>
+        <Link className='dashboard-link' to={`${url}`}><button>Dashboard</button></Link>
       {admin && <Box>
         <Link className='dashboard-link' to={`${url}/add-product`}><button>Add Product</button></Link>
-      <Link className='dashboard-link' to={`${url}/manage-order`}><button>Manage all Order</button></Link>
         <Link className='dashboard-link' to={`${url}/make-admin`}><button>Make Admin</button></Link>
         </Box>}
       <Link className='dashboard-link' to={`${url}/pay`}><button>Payment</button></Link>
         <Link className='dashboard-link' to={`${url}/my-orders`}><button >My Order</button></Link>
       <Link className='dashboard-link' to={`${url}/reviews`}><button>Reviews</button></Link>
+      <Link className='dashboard-link' to={`${url}/manage-order`}><button>Manage Order</button></Link>
       {user.email && <Link className='dashboard-link' to={''}><button onClick={logout}>Logout</button></Link>}
-      <Divider />
+      {/* <Divider /> */}
     </div>
   );
 
@@ -76,7 +80,7 @@ function Dashboard(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon />
+            {/* <MenuIcon /> */}
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             Admin Dashboard
@@ -121,14 +125,18 @@ function Dashboard(props) {
       >
         <Toolbar />
         <Switch>
+        <Route exact path={'/home'}>
+          <Home></Home>
+        </Route>
         <Route exact path={path}>
           <h1>Wellcome to Your Dashboard</h1>
+          <div className='dashboard-image'></div>
         </Route>
         <Route exact path={`${path}/make-admin`}>
           <MakeAdmin></MakeAdmin>
         </Route>
         <Route exact path={`${path}/add-product`}>
-          <AddProduct></AddProduct>
+          <AddProduct></AddProduct> 
         </Route>
         <Route exact path={`${path}/my-orders`}>
           <MyOrders></MyOrders>
