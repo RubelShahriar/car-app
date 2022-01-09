@@ -37,17 +37,23 @@ const MyOrders = () => {
             {
                 packages.map(packages => 
                 <div className='item'>
-                    <div className='image'>
+                    <div className='inline'>
                         <img src={packages.image} alt=''></img>
                     </div>
-                    <div className='inner-div'>
-                        <h4>{packages.name}</h4>
-                        <p><LocationOn className='location'/> {packages.place}</p>
-                        <p className='price'>price: ${packages.amount}</p>
-                        <p>{packages.description}</p>
-                        <button onClick={() => handleDeleteOrder(packages._id)}>Delete Order</button>
+                    <div className='inline'>
+                        <p>{packages.name}</p>
                     </div>
-                </div>) 
+                    <div className='inline'>
+                        <p><LocationOn className='location'/> {packages.place}</p>
+                    </div>
+                    <div className='inline'>
+                        <p>price: ${packages.amount}</p>
+                    </div>
+                    <div className='inline blue'>
+                        <p onClick={() => handleDeleteOrder(packages._id)}>Cancel Order</p>
+                    </div>
+                </div>
+                ) 
             }
             </div>
         </div>

@@ -1,8 +1,11 @@
 .dashboard-link{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: block;
     text-decoration: none;
     margin-left: 10px;
+}
+.home{
+    margin-top: 20px;
 }
 .dashboard-link button{
     cursor: pointer;
@@ -28,4 +31,7 @@
 }
 .toolbar{
     width: 100% !important;
+}
+.css-1oqqzyl-MuiContainer-root{
+    max-width: 1600px !important;
 }

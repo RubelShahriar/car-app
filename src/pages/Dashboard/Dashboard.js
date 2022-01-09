@@ -10,10 +10,8 @@ import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MakeAdmin from '../../dashboard/MakeAdmin/MakeAdmin';
@@ -26,6 +24,7 @@ import './Dashboard.css';
 import ManageOrder from '../../dashboard/ManageOrder/ManageOrder';
 import Payment from '../../dashboard/Payment/Payment';
 import Home from '../Home/Home'
+import logo from '../../components/images/car-logo-car-leader.svg'
 
 
 const drawerWidth = 200;
@@ -42,9 +41,11 @@ function Dashboard(props) {
 
   const drawer = (
     <div>
-      <Toolbar />
+      <Toolbar>
+        <img src={logo} alt='img'></img>
+      </Toolbar>
       {/* <Divider /> */}
-        <Link className='dashboard-link' to={`/home`}><button>Back to Home</button></Link>
+        <Link className='dashboard-link home' to={`/home`}><button>Back to Home</button></Link>
         <Link className='dashboard-link' to={`${url}`}><button>Dashboard</button></Link>
       {admin && <Box>
         <Link className='dashboard-link' to={`${url}/add-product`}><button>Add Product</button></Link>
@@ -73,15 +74,15 @@ function Dashboard(props) {
         }}
        >
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
-          >
+          > */}
             {/* <MenuIcon /> */}
-          </IconButton>
+          {/* </IconButton> */}
           <Typography variant="h6" noWrap component="div">
             Admin Dashboard
           </Typography>
@@ -93,7 +94,7 @@ function Dashboard(props) {
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Drawer
+        {/* <Drawer
           container={container}
           variant="temporary"
           open={mobileOpen}
@@ -103,11 +104,11 @@ function Dashboard(props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 0 },
           }}
         >
           {drawer}
-        </Drawer>
+        </Drawer> */}
         <Drawer
           variant="permanent"
           sx={{
@@ -121,7 +122,7 @@ function Dashboard(props) {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{ flexGrow: 1, p: 0, width: { sm: `calc(100% - 0)` } }}
       >
         <Toolbar />
         <Switch>
