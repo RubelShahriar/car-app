@@ -6,7 +6,7 @@ import image from '../../components/images/dash-img.jpeg'
 const Reviews = () => {
     const {user} = useAuth();
     const {displayName, email} = user;
-    const date  = new Date; 
+    const date  = new Date(); 
     const dateString = date.toLocaleDateString();
     const ratingRef= useRef();
     const reviewRef= useRef();
@@ -45,7 +45,8 @@ const Reviews = () => {
                     <form onSubmit={handleAddReview}>
                         <input type='text' placeholder='Your Name' defaultValue={displayName}></input>
                         <input type='text' placeholder='Your Email' defaultValue={email}></input>
-                        <input type='number' placeholder='Enter rating number 1' ref={ratingRef}></input>
+                        <input type='text' placeholder='Your Email' placeholder='city'></input>
+                        <input type='number' step='0.1' placeholder='Enter rating number 1' ref={ratingRef}></input>
                         <textarea placeholder='Write your reviews' ref={reviewRef}></textarea>
                         <button type='submit'>Add Review</button>
                     </form>

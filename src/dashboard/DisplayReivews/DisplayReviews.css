@@ -1,21 +1,30 @@
-.reviews{
-    margin: 60px 0px;
-}
-.reviews .center{
-    text-align: center;
-    margin: 40px 0px;
-}
-.reviews .review-flex{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.reviews .reviews-item{
-    border: 1px solid gainsboro;
+.reviews-item{
+    width: 80% !important;
+    border: 8px solid gainsboro;
+    border-radius: 10px;
     margin-bottom: 10px;
     padding: 10px 20px;
-    width: 45%;
 }
-.reviews .reviews-item .inner-flex .star{
+.reviews-item:hover{
+    background-color: #1B2631;
+    transition: .4s;
+}
+.scroll-bar::-webkit-scrollbar{
+    display: none;
+}
+.reviews-item .text{
+    color: #566573;
+    transition: .4s;
+}
+.reviews-item .name{
     color: #ffc107;
+    transition: .4s;
+}
+.reviews-item:hover .date{
+    color: #F0F3F4;
+    transition: .4s;
+}
+.reviews-item:hover .text{
+    color: #F0F3F4;
+    transition: .4s;
 }

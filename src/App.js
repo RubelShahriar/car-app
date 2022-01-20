@@ -15,6 +15,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import AllProducts from './pages/AllProducts/AllProducts';
 import Purchase from './pages/Purchase/Purchase';
 import MyOrders from './dashboard/MyOrders/MyOrders';
+import AddProduct from './dashboard/AddProduct/AddProduct';
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route path='/orders'>
           <MyOrders></MyOrders>
+        </Route>
+        <Route path='/add-product'>
+          <AddProduct></AddProduct>
         </Route>
         <Route path='/login'>
           <Login></Login>

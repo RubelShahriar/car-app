@@ -1,25 +1,22 @@
 .background{
-    background: url('../images/super-car-1.jpeg') no-repeat center;
+    background: url('../images/lamborgini-car.jpeg') no-repeat center;
     background-size: cover;
-    padding: 160px 0px;
+    padding: 260px 0px;
 }
 .background .find{
     margin-left: 160px;
 }
 .background small{
-    color: red;
-    margin-bottom: -10px;
+    margin-bottom: 40px;
 }
-.background h2{
-    color: white;
-    margin-bottom: -10px;
+.background .find h2{
+    font-size: 40px !important;
+    margin-bottom: -15px;
 }
 .background p{
-    color: white;
     padding-top: 10px;
 }
 .background span{
-    color: red;
     padding-top: 10px;
 }
 .background .text{

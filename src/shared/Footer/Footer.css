@@ -1,7 +1,7 @@
 .footer{
-    background: black;
+    background: #1B2631;
     color: white;
-    padding: 50px 0px;
+    padding: 10px 0px;
 }
 .footer .flex {
     display: flex;
@@ -67,15 +67,6 @@
     padding: 2px;
     border-radius: 2px;
 }
-.footer .flex .subscribe p{
-    margin-bottom: 20px;
-}
-.footer .flex .subscribe .button{
-    background: #ffb400;
-    color: white;
-    margin-top: -2px;
-}
-
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px){
     .footer .flex {

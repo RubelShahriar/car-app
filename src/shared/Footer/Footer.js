@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './Footer.css';
 import logo  from '../../components/images/logo.png';
 import { Email, Facebook, Google, LinkedIn, LocationCityOutlined, LocationOn, Phone, Send, Twitter, } from '@mui/icons-material';
 import { Button, Container, Input } from '@mui/material';
 
 const Footer = () => {
+    const [text, setText] = useState('')
+    const inputField = useRef(null)
+    const handleChange = (e) => {
+        setText(e.target.value)
+    }
+    const clearText = (e) => {
+        e.preventDefault()
+        setText('')
+    }
     return (
-        <Container className='footer'>
+        <Container style={{margin: '0 auto !important'}} className='footer'>
             <div>
             <div className='flex'>
                 <div className='logo'>
@@ -50,9 +59,11 @@ const Footer = () => {
                 </div>
                 <div className='subscribe'>
                 <h2>Subscribe</h2>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-                    <Input type='text' className='input' placeholder='Email Address'></Input>
-                    <Button type='submit' className='button'><Send className='send'></Send> </Button>
+                    <p style={{marginBottom: '20px'}}>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                    <form>
+                        <Input type='text' value={text} onChange={handleChange} ref={inputField} className='input' placeholder='Email Address'></Input>
+                        <Button type='submit' onClick={clearText} style={{background: '#ffb400', color: 'white'}}><Send style={{marginLeft:'10px'}} ></Send> </Button>
+                    </form>
                 </div>
             </div>
         </div>

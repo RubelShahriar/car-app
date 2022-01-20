@@ -4,6 +4,7 @@
 .news-flex{
     display: flex;
     justify-content: space-between;
+    border-radius: 10px;
 }
 .news-flex img{
     width: 100%;
@@ -12,12 +13,15 @@
 .news-flex small{
     color: #d2583e;
 }
+.news .overflow{
+    overflow-y: hidden !important;
+    margin-bottom: -10px;
+}
 .news-flex .item{
     width: 31%;
 }
 .news-flex .item .inner-div{
     padding: 15px;
-    box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, .1);
 }
 .news-flex .item .news-icon{
     margin-bottom: -7px;

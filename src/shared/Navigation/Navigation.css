@@ -1,6 +1,5 @@
 .navigation{
     background: white !important;
-    padding: 10px 30px;
 }
 .navigation .menu-icon{
     display: none;
@@ -10,12 +9,9 @@
 }
 .navigation .nav-item{
     color: black;
-    font-size: 16px;
     text-decoration: none;
-    margin-right: 20px;
-    font-weight: 600;
+    margin: auto 10px;
 }
-
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px){
     .navigation img{

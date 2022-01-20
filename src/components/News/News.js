@@ -13,7 +13,7 @@ const News = () => {
             <h2>Our Latest News</h2>
             <div className='news-flex'>
                 <div className='item'>
-                    <img src={imageOne} alt=''></img>
+                    <div className='overflow'><img src={imageOne} alt=''></img></div>
                     <div className='inner-div'>
                         <small><PermContactCalendar className='news-icon'></PermContactCalendar> OCTOBER 19, 2021</small>
                         <h3>GM finds its balance with sales of pickups</h3>
@@ -21,7 +21,8 @@ const News = () => {
                     </div>
                 </div>
                 <div className='item'>
-                    <img src={imagetwo} alt=''></img>
+                    <div className='overflow'>
+                    <img src={imagetwo} alt=''></img></div>
                     <div className='inner-div'>
                         <small><PermContactCalendar className='news-icon'></PermContactCalendar> OCTOBER 19, 2021</small>
                         <h3>GM finds its balance with sales of pickups</h3>
@@ -29,7 +30,7 @@ const News = () => {
                     </div>
                 </div>
                 <div className='item'>
-                    <img src={imagethree} alt=''></img>
+                <div className='overflow'><img src={imagethree} alt=''></img></div>
                     <div className='inner-div'>
                         <small><PermContactCalendar className='news-icon'></PermContactCalendar> OCTOBER 19, 2021</small>
                         <h3>GM finds its balance with sales of pickups</h3>

@@ -47,8 +47,8 @@ function Dashboard(props) {
       {/* <Divider /> */}
         <Link className='dashboard-link home' to={`/home`}><button>Back to Home</button></Link>
         <Link className='dashboard-link' to={`${url}`}><button>Dashboard</button></Link>
-      {admin && <Box>
         <Link className='dashboard-link' to={`${url}/add-product`}><button>Add Product</button></Link>
+      {admin && <Box>
         <Link className='dashboard-link' to={`${url}/make-admin`}><button>Make Admin</button></Link>
         </Box>}
       <Link className='dashboard-link' to={`${url}/pay`}><button>Payment</button></Link>
