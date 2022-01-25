@@ -14,7 +14,9 @@ const DisplayReviews = () => {
         infinite: true,
         speed: 1500,
         slidesToShow: 3.2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        autoPlay: true,
+        autoPlaySpeed: 500
       };
     //review part
     const [packages, setPackages] = useState([]);
@@ -27,7 +29,7 @@ const DisplayReviews = () => {
     return (
         <Container>
             <div style={{textAlign: 'center', margin: '60px 0'}}>
-                <div><h2>Consumers Reviews</h2></div>
+                <div><h1 style={{color: '#2C3E50'}}>Consumers Reviews</h1></div>
                 <Slider {...settings}>
                 {packages.map(packages => 
                         <div className='reviews-item'>

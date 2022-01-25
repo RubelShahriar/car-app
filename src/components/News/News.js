@@ -9,8 +9,10 @@ import './News.css';
 const News = () => {
     return (
         <Container>
-            <div className='news'>
-            <h2>Our Latest News</h2>
+            <div className='news' >
+                <div style={{textAlign: 'center'}}>
+                    <h1 style={{color: '#2C3E50'}}>Our Latest News</h1>
+                </div>
             <div className='news-flex'>
                 <div className='item'>
                     <div className='overflow'><img src={imageOne} alt=''></img></div>

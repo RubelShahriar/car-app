@@ -3,24 +3,15 @@
     background-size: cover;
     padding: 260px 0px;
 }
-.background .find{
-    margin-left: 160px;
+.background .font-family{
+  font-family: 'El Messiri', sans-serif;
+  font-size: 18px;
+  background: #ee3131;
+  margin-top: 20px;
+  cursor: text;
 }
-.background small{
-    margin-bottom: 40px;
-}
-.background .find h2{
-    font-size: 40px !important;
-    margin-bottom: -15px;
-}
-.background p{
-    padding-top: 10px;
-}
-.background span{
-    padding-top: 10px;
-}
-.background .text{
-    width: 500px;
+.background .font-family:hover{
+  background: #ee3131;
 }
 
 /* Responisve part css start */

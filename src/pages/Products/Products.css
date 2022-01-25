@@ -1,11 +1,11 @@
+.products{
+    margin-top: 80px;
+}
 .products .latest{
     text-align: center;
 }
 .products .display .item{
-    width: 31%;
-    margin-right: 20px;
     box-shadow: 1px 1px 20px 15px rgba(0, 0, 0, .1);
-    margin-bottom: 30px;
     border-radius: 10px;
 }
 .products .display .item h3{
@@ -13,8 +13,9 @@
     margin-bottom: -10px;
 }
 .products .display{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
 }
 .products .display .item .image img{
     width: 100%;
@@ -26,14 +27,11 @@
 }
 .products .display .item .car-info .icon{
     margin-bottom: -5px;
-    color: red;
-}
-.products .display .item .car-info span{
-    background-color: red;
-    color: white;
+    color: goldenrod;
 }
 .products .display .item .car-info button{
-    background: red;
+    font-family: 'El Messiri', sans-serif;
+    background: goldenrod;
     color: white;
     padding: 8px 20px;
     border-radius: 5px;
@@ -43,7 +41,7 @@
     cursor: pointer;
 }
 .products .display .item .car-info button:hover{
-    background: #f3868f;
+    background: #CB4335;
     transition: .4s;
 }
 

@@ -9,12 +9,12 @@ const Products = () => {
     useEffect(() => {
         fetch('https://tranquil-hollows-86813.herokuapp.com/cars')
         .then(res => res.json())
-        .then(data => setPackages(data.slice(1, 7)))
+        .then(data => setPackages(data.slice(3, 11)))
     }, [])
     return (
         <Container>
             <div className='products'>
-            <div className='latest'><h2>Latest Products</h2></div>
+            <div className='latest'><h1 style={{color: '#2C3E50'}}>Latest Products</h1></div>
             <div className='display'>
             {
                 packages.map(packages => 
@@ -23,9 +23,11 @@ const Products = () => {
                         <img src={packages.image} alt=''></img>
                     </div>
                     <div className='car-info'>
-                        <h3>Brand: {packages.name}</h3>
-                        <p><LocationOn className='icon'/> {packages.place} <span>price: ${packages.amount}</span></p>
-                        <p>{packages.description}</p>
+                        <h3 style={{marginTop: 0}}>Brand: {packages.name}</h3>
+                        <p style={{marginBottom: 0}}><LocationOn className='icon'/> {packages.place}</p>
+                        <p>price: ${packages.amount} -</p>
+                        {/* <p>{packages.description}</p> */}
+                        <Link style={{marginRight: '15px'}} to={`/purchase/${packages._id}`}><button>Details</button></Link>
                         <Link to={`/purchase/${packages._id}`}><button>Purchase</button></Link>
                     </div>
                 </div>) 
