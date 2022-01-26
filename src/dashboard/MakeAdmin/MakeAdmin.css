@@ -19,7 +19,6 @@
 }
 .admin-flex .admin-image{
     width: 100%;
-    background: url('../../components//images/make-admin-dashboard.jpeg') no-repeat center;
     background-size: cover;
     height: 300px;
     border-radius: 10px;

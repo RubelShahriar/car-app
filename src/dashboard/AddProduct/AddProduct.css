@@ -1,38 +1,16 @@
-.add-product .add-product{
-    text-align: center;
-}
 .add-product{
-    width: 50%;
+    height: 85vh;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(241, 241, 241, .9);
+}
+.add-product .a-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
 }
-.add-product input{
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    width: 300px;
-    height: 40px;
-    border-radius: 5px;
-    border-color: teal;
-    padding: 5px 10px;
-}
-.add-product .submit{
-    background: #1976d2;
-    color: white;
-    font-size: 18px;
-    border-radius: 10px;
-    font-weight: 500;
-    border: none;
-} 
-.flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.flex .image{
-    width: 65%;
-}
-.flex .image img{
+.add-product .a-grid .image img{
     width: 100%;
-    height: 400px;
+    height: 550px;
     border-radius: 10px;
 }

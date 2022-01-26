@@ -1,16 +1,14 @@
-import { Container } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Rating from 'react-rating';
-// import "~slick-carousel/slick/slick.css"; 
-// import "~slick-carousel/slick/slick-theme.css";
-import './DisplayReviews.css';
-import quoteImage from '../../components/images/review-quote.png'
+import { CircularProgress, Container } from '@mui/material';
 import Slider from 'react-slick';
+import quoteImage from '../../components/images/review-quote.png'
+import './DisplayReviews.css';
 
 const DisplayReviews = () => {
     //slick-slider part
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 1500,
         slidesToShow: 3.2,
@@ -19,19 +17,21 @@ const DisplayReviews = () => {
         autoPlaySpeed: 500
       };
     //review part
-    const [packages, setPackages] = useState([]);
+    const [review, setReview] = useState([]);
     useEffect(() => {
         fetch('https://tranquil-hollows-86813.herokuapp.com/reviews')
         .then(res => res.json())
-        .then(data => setPackages(data))
+        .then(data => setReview(data))
     }, [])
 
     return (
         <Container>
             <div style={{textAlign: 'center', margin: '60px 0'}}>
                 <div><h1 style={{color: '#2C3E50'}}>Consumers Reviews</h1></div>
+                {!review.length ? 
+                <div style={{textAlign: 'center'}}><CircularProgress></CircularProgress></div> :
                 <Slider {...settings}>
-                {packages.map(packages => 
+                {review.map(packages => 
                         <div className='reviews-item'>
                                 <div style={{marginTop: '30px'}}>
                                     <img style={{margin: '0 auto'}} src={quoteImage} alt=''></img>
@@ -61,6 +61,7 @@ const DisplayReviews = () => {
                         </div>
                 )}
                 </Slider>
+                }
             </div>
         </Container>
     );

@@ -1,58 +1,29 @@
-.review{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.add-review{
+    height: 85vh;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(241, 241, 241, .9);
 }
-.review .image{
-    width: 50%;
+.add-review .a-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
 }
-.review .image img{
+.add-review .a-grid .image img{
     width: 100%;
-    height: 300px;
+    height: 450px;
     border-radius: 10px;
 }
-.review .reviews{
-    width: 45%;
-}
-.title{
-    text-align: center;
-    margin-bottom: 10px;
-}
-.reviews input{
-    font-family: Arial, Helvetica, sans-serif;
-    width: 300px;
-    height: 40px;
-    display: block;
-    margin-bottom: 15px;
+.add-review .textarea{
+    width: 75%;
+    height: 100px !important;
+    resize: none;
+    background-color: transparent;
     border-radius: 5px;
-    font-size: 16px;
-    padding: 0 10px;
+    border-color: #B3B6B7;
 }
-.reviews textarea{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    width: 300px;
-    height: 100px;
-    display: block;
-    border: 2px solid black;
-    border-radius: 5px;
-}
-.reviews button{
-    width: 300px;
-    height: 40px;
-    padding: 8px 20px;
-    font-size: 16px;
+.add-review .btn{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 18px;
     font-weight: 600;
-    background: #1976d2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-.flex-review{
-    display: flex !important;
-    justify-content: center !important;
-    display: inline-block;
-    margin: 0 auto;
 }

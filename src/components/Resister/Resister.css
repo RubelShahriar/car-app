@@ -1,16 +1,8 @@
-.resister{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
-.resister h2{
-    margin-top: 40px;
-    margin-bottom: -80px;
-}
-.resister .center{
-    text-align: center;
-}
-
-.resister .short{
-    display: inline-block;
+.resister .signup-btn{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 20px;
 }

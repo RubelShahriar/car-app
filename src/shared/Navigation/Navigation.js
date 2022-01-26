@@ -16,7 +16,9 @@ const Navigation = () => {
               <AppBar sx={{bgcolor: 'white', boxShadow: 0, height: 60}} className='navigation' position="fixed">
                 <Container>
                   <Toolbar>
-                    <Box sx={{width: 200}}><img src={logo} alt=''></img></Box>
+                    <Box sx={{width: 200, cursor: 'pointer'}}>
+                      <Link to='/'><img src={logo} alt=''></img></Link>
+                    </Box>
                       <Box sx={{ml: 'auto'}}>
                         <Link to='/' className='nav-item'>Home</Link>
                         <Link to='/all-products' className='nav-item'>Products</Link>

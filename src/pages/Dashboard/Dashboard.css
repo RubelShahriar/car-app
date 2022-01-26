@@ -1,37 +1,57 @@
-.dashboard-link{
-    margin-bottom: 20px;
-    display: block;
-    text-decoration: none;
-    margin-left: 10px;
+.dashboard{
+    font-family: 'El Messiri', sans-serif;
 }
-.home{
-    margin-top: 20px;
-}
-.dashboard-link button{
-    cursor: pointer;
-    padding: 8px 20px;
-    font-size: 16px;
+.dashboard .heading{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 30px;
     font-weight: 600;
-    background: #1976d2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    width: 150px;
+    text-align: center;
+    display: block;
 }
-.dashboard-link button:hover{
-    background: #3986d3;
+.dashboard .d-link{
+    font-family: 'El Messiri', sans-serif !important;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    background: #f1f1f1;
+    border-radius: 5px;
+    width: 200px;
+    text-decoration: none;
+    padding: 8px 20px;
+    color: #34495E;
+}
+.dashboard .d-link button:hover{
+    background: #f1f1f1;
     transition: .4s;
 }
-.dashboard-image{
-    background: url("../../components/images/sales-dashboard.png") no-repeat center;
+.dashboard .grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgba(241, 241, 241, .9);
+    height: 85vh;
+    padding: 30px;
+    border-radius: 15px;
+}
+.dashboard .greeting{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    color: #2C3E50;
+}
+.dashboard .dashboard-image{
+    background: url("../../components/images/dashboard.svg") no-repeat center;
     background-size: cover;
-    height: 500px;
+    height: 600px;
     width: 100%;
     border-radius: 10px;
 }
-.toolbar{
-    width: 100% !important;
+.css-1t29gy6-MuiToolbar-root{
+    min-height: 0 !important;
 }
-.css-1oqqzyl-MuiContainer-root{
-    max-width: 1600px !important;
+.dashboard .sidebar-icon{
+    margin-bottom: -5px;
+    margin-right: 10px;
 }

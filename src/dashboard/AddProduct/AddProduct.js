@@ -2,21 +2,26 @@ import React, { useRef } from 'react';
 import useAuth from '../../hooks/useAuth';
 import './AddProduct.css';
 import image from '../../components/images/add-product-dashboard.jpeg'
+import { Button, TextField } from '@mui/material';
 const AddProduct = () => {
     const {user} = useAuth();
     const {displayName, email} = user;
     const imageRef= useRef();
     const placeRef= useRef();
     const nameRef= useRef();
-    const amountRef= useRef();
+    const discountRef= useRef();
+    const realRef= useRef();
     const descriptionRef= useRef();
+    const versionRef= useRef();
     const handleAddPackage = e => {
         const image= imageRef.current.value;
         const place= placeRef.current.value;
         const name = nameRef.current.value;
-        const amount = amountRef.current.value;
+        const discountPrice = discountRef.current.value;
+        const realPrice = realRef.current.value;
         const description = descriptionRef.current.value;
-        const packageInfo = {image, place, name, displayName, email, amount, description};
+        const version = versionRef.current.value;
+        const packageInfo = {image, place, name, displayName, email, discountPrice, realPrice, description, version};
 
         
         fetch('https://tranquil-hollows-86813.herokuapp.com/cars', { 
@@ -36,21 +41,25 @@ const AddProduct = () => {
         e.preventDefault();
     }
     return (
-        <div className='flex'>
+        <div className='add-product'>
+        <div style={{textAlign: 'center', fontSize: '30px', margin: '20px 0'}}>Add Product to Productpage</div>
+        <div className='a-grid'>
             <div className='image'>
                 <img src={image} alt='img'></img>
             </div>
-            <div className='add-product'>
-                <div><h2>Add Product to Homepage</h2></div>
-                    <form onSubmit={handleAddPackage}>
-                        <input type="url" placeholder="Enter Image URL" ref={imageRef}></input>
-                        <input type="text" placeholder="Enter Name" ref={nameRef}></input>
-                        <input type="text" placeholder="Enter Place" ref={placeRef}></input>
-                        <input type="text" placeholder="Enter Amount" ref={amountRef}></input>
-                        <input type="text" placeholder="Enter Description" ref={descriptionRef}></input>
-                        <input type="submit" className='submit' value="Add Product"></input>
-                    </form>
+            <div>
+                <form onSubmit={handleAddPackage}>
+                    <TextField sx={{width: '75%', mb: 2}} type='url' required id="outlined-required" label="Image URL" ref={imageRef}/>
+                    <TextField sx={{width: '75%', mb: 2}} type='text' required id="outlined-required" label="Product Name" ref={nameRef}/>
+                    <TextField sx={{width: '75%', mb: 2}} type='text' required id="outlined-required" label="Place" ref={placeRef}/>
+                    <TextField sx={{width: '75%', mb: 2}} type='number' required id="outlined-required" label="Product Price" ref={realRef}/>
+                    <TextField sx={{width: '75%', mb: 2}} type='number' required id="outlined-required" label="Discount Price" ref={discountRef}/>
+                    <TextField sx={{width: '75%', mb: 2}} type='number' required id="outlined-required" label="Version Year" ref={versionRef}/>
+                    <TextField sx={{width: '75%', mb: 2}} type='text' required id="outlined-required" label="Product Description" ref={descriptionRef}/>
+                    <Button sx={{width: '75%', mb: 2}} type='submit' variant='contained'>Add Product</Button>
+                </form>
             </div>
+        </div>
         </div>
     );
 };

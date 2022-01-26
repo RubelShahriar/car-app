@@ -11,5 +11,7 @@
     text-align: center;
 }
 .login .display{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 20px;
     margin-bottom: 20px;
 }

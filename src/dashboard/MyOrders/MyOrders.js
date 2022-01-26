@@ -3,7 +3,7 @@ import { LocationOn } from '@mui/icons-material';
 import useAuth from '../../hooks/useAuth';
 import './MyOrders.css';
 
-const MyOrders = () => {
+const MyOrders = (props) => {
     const [packages, setPackages] = useState([]);
     const {user} = useAuth();
     useEffect(() => {

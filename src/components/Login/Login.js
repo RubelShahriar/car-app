@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import Navigation from '../../shared/Navigation/Navigation'
 import './Login.css';
 
 const Login = () => {
@@ -29,6 +30,8 @@ const Login = () => {
     }
 
     return (
+        <>
+        <Navigation></Navigation>
         <div className='login'>
             <div>
                 <div className='heading'><h2>Log In Here!</h2></div>
@@ -49,16 +52,10 @@ const Login = () => {
                  name='password'
                  type='password' 
                  variant="outlined" />
-                <Button 
-                    variant="contained" 
-                    className='display'
-                    type='submit' 
-                    sx={{width: '1'}}>
-                        Sign In
-                </Button>
+                <Button variant="contained" className='display'type='submit' sx={{width: '1'}}>Sign In</Button>
             </form></div>
             <p>New User? Please <Link to='/resister'>Resister</Link> OR,</p>
-            <div><Button sx={{width:'1', mb: 2}}  onClick={handleGoogleSignIn} variant="contained">SignIn With Google</Button></div>
+            <div><Button sx={{width:'1', mb: 2}}  onClick={handleGoogleSignIn} className='display' variant="contained">Sign In With Google</Button></div>
             {isLoading && <CircularProgress />}
             <div>{user.email && <Alert  severity="success">This is a success alert — check it out!</Alert>}</div>
             <div>{errors && <Alert severity="error">
@@ -67,6 +64,7 @@ const Login = () => {
                 </Alert>}</div>
             </div>
         </div>
+        </>
     );
 };
 
