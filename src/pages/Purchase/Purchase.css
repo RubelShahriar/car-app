@@ -1,73 +1,42 @@
-.purchase .place-order{
-    text-align: center;
+.purchase{
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
-.purchase .flex{
-    display: flex;
+.purchase .display{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
-.purchase .flex .left{
-    width: 60%;
+.purchase .display .left img{
+    width: 70%;
+    height: 300px;
 }
-.purchase .flex .left img{
-    width: 80%;
-    height: 350px;
-}
-.purchase .flex .right{
-    width: 40%;
-    margin-top: 60px;
-}
-.purchase .right input{
-    display: block;
-    width: 300px;
-    height: 30px;
-    margin-bottom: 10px;
-}
-.purchase .left button{
-    display: block;
-    width: 306px;
-    height: 40px;
-    margin-bottom: 10px;
-    border: none;
-    background: red;
-    color: white;
-}
-.purchase .right button{
-    display: block;
-    width: 306px;
-    height: 40px;
-    margin-bottom: 10px;
-    border: none;
-    background: red;
-    color: white;
+.css-1t29gy6-MuiToolbar-root{
+padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px){
-    .purchase .flex{
-        flex-wrap: wrap;
-    }
-    .purchase .flex .left{
+    .purchase .grid .left{
         width: 100%;
     }
-    .purchase .flex .right{
+    .purchase .grid .right{
         width: 100%;
     }
 }
 @media (min-width: 576px) and (max-width: 767px){
-    .purchase .flex{
-        flex-wrap: wrap;
-    }
-    .purchase .flex .left{
+    .purchase .grid .left{
         width: 100%;
     }
-    .purchase .flex .right{
+    .purchase .grid .right{
         width: 100%;
     }
 }
 @media (min-width: 768px) and (max-width: 991px){
-    .purchase .flex .left{
+    .purchase .grid .left{
         width: 60%;
     }
-    .purchase .flex .right{
+    .purchase .grid .right{
         width: 40%;
     }
 }

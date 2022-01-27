@@ -1,20 +1,17 @@
-import { Container } from '@mui/material';
+import { Button, Container, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import Navigation from '../../shared/Navigation/Navigation'
 import './Purchase.css';
 
 const Purchase = () => {
-    const date  = new Date;
-    const dateString = date.toLocaleDateString();
+    const dateString  = new Date().toLocaleDateString();
     const {id} = useParams();
     const [carInfo, setCarInfo] = useState({})
     const {user} = useAuth();
     const {displayName, email} = user;
-    const {name, image, place, description, amount} = carInfo;
-
-    
-
+    const {name, image, place, description, discountPrice} = carInfo;
     useEffect(() => {
         const url = `https://tranquil-hollows-86813.herokuapp.com/cars/${id}`;
         fetch(url)
@@ -23,8 +20,7 @@ const Purchase = () => {
     }, [])
 
     const handlePlaceOrder = e => {
-        const packageInfo = {name, image, place, displayName, email, description, amount, dateString};
-
+        const packageInfo = {name, image, place, displayName, email, description, discountPrice, dateString};
         fetch('https://tranquil-hollows-86813.herokuapp.com/orders', { 
             method: 'post',
             headers:{
@@ -43,36 +39,40 @@ const Purchase = () => {
     }
 
     return (
+        <>
+        <Navigation></Navigation>
         <Container>
             <div className='purchase'>
-            <div className='place-order'><h2>Place an Order</h2></div>
-            <div className='flex'>
-                <div className='left'>
+            <div style={{textAlign: 'center'}}><h1>Place an Order</h1></div>
+            <div className='display'>
+                <div className='left' style={{padding: '0 20px 50px'}}>
                     <h2>Purchase product Details:</h2>
-                    <p>product name:{name}</p>
-                    <p>product price: {amount}</p>
-                    <p>product origin: {place}</p>
+                    <p style={{fontSize: '18px', margin: '4px auto'}}>Product Name: {name}</p>
+                    <p style={{fontSize: '18px', margin: '4px auto'}}>Product Price: {discountPrice}</p>
+                    <p style={{fontSize: '18px', margin: '4px auto'}}>Product Origin: {place}</p>
                     <img src={image} alt=''></img>
-                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoraliz the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble thena bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
-                    <button>We hope that you found your Dream car</button>
+                    <p style={{fontSize: '18px'}}>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoraliz the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble thena bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
+                    <p style={{padding: '5px 20px', fontSize: '18px', background: 'goldenrod', display: 'inline'}}>We hope that you found your Dream car</p>
                 </div>
-                <div className='right'>
+                <div className='right' style={{textAlign: 'center'}}>
                     <h3>Book Your Order</h3>
                     <form onSubmit= {handlePlaceOrder}>
-                        <input type='text' defaultValue={displayName}></input>
-                        <input type='text' defaultValue={email}></input>
-                        <input type='text' defaultValue={name}></input>
-                        <input type='number' defaultValue={amount}></input>
-                        <input type='text' placeholder='Your Phone'></input>
-                        <input type='text' placeholder='Address'></input>
-                        <input type='text' placeholder='Country'></input>
-                        <input type='text' placeholder='Postal Code'></input>
-                        <button type='submit'>CONFIRM BOOKING</button>
+                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" defaultValue={displayName} />
+                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" defaultValue={email} />
+                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" value={name} />
+                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" value={discountPrice} />
+                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" placeholder='Phone' />
+                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" placeholder='Address' />
+                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" placeholder='Country' />
+                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" placeholder='Postal Code' />
+                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" placeholder='Phone' />
+                        <Button type='submit' style={{width: '90%'}} variant='contained'>Confirm Booking</Button>
                     </form>
                 </div>
             </div>
         </div>
         </Container>
+        </>
     );
 };
 

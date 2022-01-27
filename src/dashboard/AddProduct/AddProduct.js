@@ -21,7 +21,7 @@ const AddProduct = () => {
         const realPrice = realRef.current.value;
         const description = descriptionRef.current.value;
         const version = versionRef.current.value;
-        const packageInfo = {image, place, name, displayName, email, discountPrice, realPrice, description, version};
+        const packageInfo = {image, place, name, displayName, email, realPrice, discountPrice, description, version};
 
         
         fetch('https://tranquil-hollows-86813.herokuapp.com/cars', { 

@@ -1,16 +1,15 @@
-.my-orders{
+.orders{
     text-align: center;
-    font-size: 20px;
     font-weight: 500;
 }
-.my-orders thead{
+.orders thead{
     border-bottom: 2px solid #566573;
     margin-bottom: 10px;
 }
-.my-orders tr{
+.orders tr{
     border-bottom: 1px solid #D0D3D4;
 }
-.my-orders td{
+.orders td{
     text-align: center;
     padding: 4px 10px;
 }

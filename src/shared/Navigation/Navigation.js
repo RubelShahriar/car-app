@@ -13,7 +13,7 @@ const Navigation = () => {
   const {user, logout} = useAuth();
     return (
             <Box sx={{ flexGrow: 1}}>
-              <AppBar sx={{bgcolor: 'white', boxShadow: 0, height: 60}} className='navigation' position="fixed">
+              <AppBar sx={{bgcolor: 'white', height: 60}} className='navigation' position="fixed">
                 <Container>
                   <Toolbar>
                     <Box sx={{width: 200, cursor: 'pointer'}}>

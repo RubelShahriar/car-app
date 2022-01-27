@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { LocationOn } from '@mui/icons-material';
+import { CircularProgress } from '@mui/material';
+import { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import './MyOrders.css';
 
-const MyOrders = (props) => {
-    const [packages, setPackages] = useState([]);
+const MyOrders = () => {
+  const [packages, setPackages] = useState([]);
     const {user} = useAuth();
     useEffect(() => {
         fetch(`https://tranquil-hollows-86813.herokuapp.com/orders?email=${user.email}`)
@@ -32,30 +32,32 @@ const MyOrders = (props) => {
 
     return (
         <div className='my-orders'>
-            <h2>My Orders</h2>
-            <div className='flex'>
-            {
-                packages.map(packages => 
-                <div className='item'>
-                    <div className='inline'>
-                        <img src={packages.image} alt=''></img>
-                    </div>
-                    <div className='inline'>
-                        <p>{packages.name}</p>
-                    </div>
-                    <div className='inline'>
-                        <p><LocationOn className='location'/> {packages.place}</p>
-                    </div>
-                    <div className='inline'>
-                        <p>price: ${packages.amount}</p>
-                    </div>
-                    <div className='inline blue'>
-                        <p onClick={() => handleDeleteOrder(packages._id)}>Cancel Order</p>
-                    </div>
-                </div>
-                ) 
+            <h2 style={{marginTop: '0'}}>My Orders</h2>
+            {!packages.length ? 
+                <CircularProgress style={{marginTop: '10%'}}/> :
+            <table style={{margin: '0 auto', borderCollapse: 'collapse', width: '90%'}}>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Ordered Date</th>
+                        <th>Price</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                    {packages.map(packages => 
+                        <tr>
+                            <td><img style={{width: '100px', borderRadius: '5px'}} src={packages.image} alt=''></img></td>
+                            <td>{packages.name}</td>
+                            <td>{packages.place}</td>
+                            <td>${packages.discountPrice}</td>
+                            <td>
+                            <p style={{border: '1px solid #F4D03F', borderRadius: '5px', color: '#D4AC0D',background: '#FEF9E7',padding: '0 3px', margin: '0', display: 'inline'}} onClick={() => handleDeleteOrder(packages._id)}>Cancel Order</p>
+                            </td>
+                        </tr>
+                    )}
+                </table>
             }
-            </div>
         </div>
     );
 };

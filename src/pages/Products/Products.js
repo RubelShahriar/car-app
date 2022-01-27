@@ -25,10 +25,9 @@ const Products = () => {
                     </div>
                     <div className='car-info'>
                         <h3 style={{marginTop: 0}}>Brand: {packages.name}</h3>
-                        <p style={{marginBottom: 0}}><LocationOn className='icon'/> {packages.place}</p>
-                        <p style={{marginBottom: 0}}><EventNoteRounded className='icon'/>Model: {packages.version}</p>
-                        <p style={{fontSize: '20px'}}> Price: ${packages.discountPrice} - <span style={{textDecoration: 'line-through 2px', color: 'gray', fontWeight: 'bold'}}> ${packages.realPrice}</span></p>
-                        {/* <p>{packages.description}</p> */}
+                        <div style={{display: 'flex'}}><p style={{marginBottom: 0}}><LocationOn className='icon'/> {packages.place}</p>
+                        <p style={{marginBottom: 0, marginLeft: '10px'}}><EventNoteRounded className='icon'/>Model: {packages.version}</p></div>
+                        <p style={{fontSize: '20px'}}> Price: ${packages.discountPrice} - <span style={{textDecoration: 'line-through 2px', color: 'gray', fontWeight: 'bold'}}> ${packages.discountPrice}</span></p>
                         <Link style={{marginRight: '15px'}} to={`/purchase/${packages._id}`}><button>Details</button></Link>
                         <Link to={`/purchase/${packages._id}`}><button>Purchase</button></Link>
                     </div>
