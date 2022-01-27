@@ -26,7 +26,7 @@ const AddProduct = () => {
         formData.append('versionYear', versionYear)
         formData.append('description', description)
         //fetch car api 
-        fetch('http://localhost:4000/car', {
+        fetch('https://tranquil-hollows-86813.herokuapp.com/cars', {
             method: 'POST',
             body: formData
             })
