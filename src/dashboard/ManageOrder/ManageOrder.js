@@ -61,8 +61,8 @@ const ManageOrder = () => {
                         <td>{order.name}</td>
                         <td>{order.displayName}</td>
                         <td>${order.discountPrice}</td>
-                        <td><p style={{color: '#9B59B6', margin: '0', border: '1px solid #9B59B6', borderRadius:'5px', background: '#F5EEF8'}} onClick={(e) => changeStatus(e)}>pending...</p></td>
-                        <td><DeleteForeverRounded style={{color: '#D4AC0D', fontSize: '1.8em'}} onClick={() => handleDeleteOrder(order._id)}/></td>
+                        <td><p style={{color: '#9B59B6', margin: '0', border: '1px solid #9B59B6', borderRadius:'5px', background: '#F5EEF8', cursor: 'pointer'}} onClick={(e) => changeStatus(e)}>pending...</p></td>
+                        <td><p style={{margin: 0}} title='delete'><DeleteForeverRounded style={{color: '#D4AC0D', fontSize: '1.8em', cursor: 'pointer'}} onClick={() => handleDeleteOrder(order._id)} /></p></td>
                     </tr>
                         )}
                 </table>

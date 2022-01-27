@@ -41,8 +41,8 @@ function Dashboard(props) {
         <Link className='d-link' to={`${url}/my-orders`}><ShoppingCartRounded className='sidebar-icon'/>My Orders<Badge badgeContent={4} color='secondary' sx={{ml: 2}}></Badge></Link>
         <Link className='d-link' to={`${url}/reviews`}><AddCommentRounded className='sidebar-icon'/>Add a Review</Link>
         <Link className='d-link' to={`${url}/manage-order`}><AnalyticsRounded className='sidebar-icon'/>Manage Order</Link>
-       {admin && <Box>
          <Link className='d-link' to={`${url}/make-admin`}><PersonAddAlt1Rounded className='sidebar-icon'/>Make Admin</Link>
+       {admin && <Box>
          </Box>}
        {user.email && <Link className='d-link' onClick={logout}  to={''}> <LogoutRounded className='sidebar-icon'/>Logout</Link>}
     </div>

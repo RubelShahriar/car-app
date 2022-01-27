@@ -1,62 +1,63 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import './AddProduct.css';
-import image from '../../components/images/add-product-dashboard.jpeg'
-import { Button, TextField } from '@mui/material';
+import addProductImage from '../../components/images/add-product-dashboard.jpeg'
+import { Button, Input, TextField } from '@mui/material';
 const AddProduct = () => {
+    const [image, setImage] = useState(null)
+    const [productName, setProductName] = useState('')
+    const [place, setPlace] = useState('')
+    const [originalPrice, setOriginalPrice] = useState(0)
+    const [discountPrice, setDiscountPrice] = useState(0)
+    const [versionYear, setVersionYear] = useState(0)
+    const [description, setDiscription] = useState('')
     const {user} = useAuth();
     const {displayName, email} = user;
-    const imageRef= useRef();
-    const placeRef= useRef();
-    const nameRef= useRef();
-    const discountRef= useRef();
-    const realRef= useRef();
-    const descriptionRef= useRef();
-    const versionRef= useRef();
-    const handleAddPackage = e => {
-        const image= imageRef.current.value;
-        const place= placeRef.current.value;
-        const name = nameRef.current.value;
-        const discountPrice = discountRef.current.value;
-        const realPrice = realRef.current.value;
-        const description = descriptionRef.current.value;
-        const version = versionRef.current.value;
-        const packageInfo = {image, place, name, displayName, email, realPrice, discountPrice, description, version};
-
-        
-        fetch('https://tranquil-hollows-86813.herokuapp.com/cars', { 
-            method: 'post',
-            headers:{
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(packageInfo),
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(data.insertedId){
-                alert('Product Added Successfully')
-                e.target.reset();
-            }
-        })
+    const handleAddProduct = e => {
         e.preventDefault();
+        const formData = new FormData();
+        formData.append('displayName', displayName)
+        formData.append('email', email)
+        formData.append('image', image)
+        formData.append('productName', productName)
+        formData.append('place', place)
+        formData.append('originalPrice', originalPrice)
+        formData.append('discountPrice', discountPrice)
+        formData.append('versionYear', versionYear)
+        formData.append('description', description)
+        //fetch car api 
+        fetch('http://localhost:4000/car', {
+            method: 'POST',
+            body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.insertedId){
+                    alert('Product Added Successfully')
+                    e.target.reset()
+                }
+            })
+            .catch(error => {
+            console.error('Error:', error);
+            });
     }
     return (
         <div className='add-product'>
         <div style={{textAlign: 'center', fontSize: '30px', margin: '20px 0'}}>Add Product to Productpage</div>
         <div className='a-grid'>
             <div className='image'>
-                <img src={image} alt='img'></img>
+                <img src={addProductImage} alt='img'></img>
             </div>
             <div>
-                <form onSubmit={handleAddPackage}>
-                    <TextField sx={{width: '75%', mb: 2}} type='url' required id="outlined-required" label="Image URL" ref={imageRef}/>
-                    <TextField sx={{width: '75%', mb: 2}} type='text' required id="outlined-required" label="Product Name" ref={nameRef}/>
-                    <TextField sx={{width: '75%', mb: 2}} type='text' required id="outlined-required" label="Place" ref={placeRef}/>
-                    <TextField sx={{width: '75%', mb: 2}} type='number' required id="outlined-required" label="Product Price" ref={realRef}/>
-                    <TextField sx={{width: '75%', mb: 2}} type='number' required id="outlined-required" label="Discount Price" ref={discountRef}/>
-                    <TextField sx={{width: '75%', mb: 2}} type='number' required id="outlined-required" label="Version Year" ref={versionRef}/>
-                    <TextField sx={{width: '75%', mb: 2}} type='text' required id="outlined-required" label="Product Description" ref={descriptionRef}/>
-                    <Button sx={{width: '75%', mb: 2}} type='submit' variant='contained'>Add Product</Button>
+                <form onSubmit={handleAddProduct}>
+                    <Input sx={{width: '75%', mb: 2}} accept="image/*" type="file" onChange={(e) => setImage(e.target.files[0])} />
+                    <TextField sx={{width: '75%', mb: 2}} onChange={(e) => setProductName(e.target.value)} type='text' variant='standard' label="Product Name" />
+                    <TextField sx={{width: '75%', mb: 2}} onChange={(e) => setPlace(e.target.value)} type='text' variant='standard' label="Place" />
+                    <TextField sx={{width: '75%', mb: 2}} onChange={(e) => setOriginalPrice(e.target.value)} type='number' variant='standard' label="Product Price" />
+                    <TextField sx={{width: '75%', mb: 2}} onChange={(e) => setDiscountPrice(e.target.value)} type='number' variant='standard' label="Discount Price" />
+                    <TextField sx={{width: '75%', mb: 2}} onChange={(e) => setVersionYear(e.target.value)} type='number' variant='standard' label="Version Year" />
+                    <TextField sx={{width: '75%', mb: 3}} onChange={(e) => setDiscription(e.target.value)} type='text' variant='standard' label="Product Description" />
+                    <Button sx={{width: '75%'}} type='submit' variant='contained'>Add Product</Button>
                 </form>
             </div>
         </div>
