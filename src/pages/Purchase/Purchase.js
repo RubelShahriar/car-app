@@ -6,13 +6,16 @@ import Navigation from '../../shared/Navigation/Navigation'
 import './Purchase.css';
 
 const Purchase = () => {
-    const dateString  = new Date().toLocaleDateString();
-    const {id} = useParams();
-    const [carInfo, setCarInfo] = useState({})
     const {user} = useAuth();
     const {displayName, email} = user;
+    const {id} = useParams();
+    const dateString  = new Date().toLocaleDateString();
+    const [carInfo, setCarInfo] = useState({})
     const {productName, image, place, description, discountPrice} = carInfo;
-    console.log(productName)
+    const [phone, setPhone] = useState('')
+    const [address, setaddress] = useState('')
+    const [country, setCountry] = useState('')
+    const [postalCode, setPostalCode] = useState('')
     useEffect(() => {
         const url = `https://tranquil-hollows-86813.herokuapp.com/products/${id}`;
         fetch(url)
@@ -21,9 +24,9 @@ const Purchase = () => {
     }, [])
 
     const handlePlaceOrder = e => {
-        const packageInfo = {productName, image, place, displayName, email, description, discountPrice, dateString};
-        fetch('https://tranquil-hollows-86813.herokuapp.com/orders', { 
-            method: 'post',
+        const packageInfo = {displayName, email, productName, image, place, discountPrice, phone, address, country, postalCode, dateString};
+        fetch('https://tranquil-hollows-86813.herokuapp.com/products', { 
+            method: '',
             headers:{
                 'content-type': 'application/json'
             },
@@ -39,6 +42,7 @@ const Purchase = () => {
         e.preventDefault()
     }
 
+
     return (
         <>
         <Navigation></Navigation>
@@ -48,25 +52,24 @@ const Purchase = () => {
             <div className='display'>
                 <div className='left' style={{padding: '0 20px 50px'}}>
                     <h2>Purchase product Details:</h2>
-                    <p style={{fontSize: '18px', margin: '4px auto'}}>Product Name: {productName}</p>
-                    <p style={{fontSize: '18px', margin: '4px auto'}}>Product Price: {discountPrice}</p>
-                    <p style={{fontSize: '18px', margin: '4px auto'}}>Product Origin: {place}</p>
+                    <p style={{fontSize: '20px', margin: '4px auto', fontWeight: 'bold'}}>Product Name: <span style={{fontWeight: 'normal'}}>{productName}</span></p>
+                    <p style={{fontSize: '18px', margin: '4px auto', fontWeight: 'bold'}}>Product Price: <span style={{fontWeight: 'normal'}}>${discountPrice}</span></p>
+                    <p style={{fontSize: '18px', margin: '4px auto', fontWeight: 'bold'}}>Product Origin: <span style={{fontWeight: 'normal'}}>{place}</span></p>
                     <img src={`data:image/png;base64,${image}`} alt=''></img>
-                    <p style={{fontSize: '18px'}}>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoraliz the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble thena bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
-                    <p style={{padding: '5px 20px', fontSize: '18px', background: 'goldenrod', display: 'inline'}}>We hope that you found your Dream car</p>
+                    <h2 style={{marginBottom: '-10px'}}>Description:</h2>
+                    <p style={{fontSize: '18px'}}>{description}</p>
+                    <p style={{padding: '5px 20px', fontSize: '18px', background: 'goldenrod', display: 'inline'}}>We hope that you have found your Dream car</p>
                 </div>
                 <div className='right' style={{textAlign: 'center'}}>
                     <h3>Book Your Order</h3>
                     <form onSubmit= {handlePlaceOrder}>
-                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" defaultValue={displayName} />
-                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" defaultValue={email} />
-                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" value={productName} />
-                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" value={discountPrice} />
-                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" placeholder='Phone' />
-                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" placeholder='Address' />
-                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" placeholder='Country' />
-                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" placeholder='Postal Code' />
-                        <TextField style={{width: '90%', marginBottom: '10px'}} id="outlined-basic" variant="outlined" placeholder='Phone' />
+                        <TextField type='email' className='input' variant="outlined" defaultValue={email} />
+                        <TextField type='text' className='input' variant="outlined" value={productName} />
+                        <TextField type='text' className='input' variant="outlined" value={`$${discountPrice}`} />
+                        <TextField type='number' className='input' variant="outlined" placeholder='Phone' onChange={e => setPhone(e.target.value)} />
+                        <TextField type='text' className='input' variant="outlined" placeholder='Address' onChange={e => setaddress(e.target.value)}/>
+                        <TextField type='text' className='input' variant="outlined" placeholder='Country' onChange={e => setCountry(e.target.value)}/>
+                        <TextField type='number' className='input' variant="outlined" placeholder='Postal Code' onChange={e => setPostalCode(e.target.value)}/>
                         <Button type='submit' style={{width: '90%'}} variant='contained'>Confirm Booking</Button>
                     </form>
                 </div>

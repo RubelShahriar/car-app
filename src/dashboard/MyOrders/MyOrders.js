@@ -52,7 +52,7 @@ const MyOrders = () => {
                             <td>{packages.place}</td>
                             <td>${packages.discountPrice}</td>
                             <td>
-                            <p style={{border: '1px solid #F4D03F', borderRadius: '5px', color: '#D4AC0D',background: '#FEF9E7',padding: '0 3px', margin: '0', display: 'inline'}} onClick={() => handleDeleteOrder(packages._id)}>Cancel Order</p>
+                                <p style={{border: '1px solid #F4D03F', borderRadius: '5px', color: '#D4AC0D',background: '#FEF9E7',padding: '0 3px', margin: '0', display: 'inline'}} onClick={() => handleDeleteOrder(packages._id)}>Cancel Order</p>
                             </td>
                         </tr>
                     )}

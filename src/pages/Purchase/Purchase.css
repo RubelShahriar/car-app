@@ -7,8 +7,13 @@
     grid-template-columns: 2fr 1fr;
 }
 .purchase .display .left img{
-    width: 70%;
+    width: 80%;
     height: 300px;
+    border-radius: 5px;
+}
+.purchase .input{
+    width: 90%;
+    margin-bottom: 10px;
 }
 .css-1t29gy6-MuiToolbar-root{
 padding-left: 0 !important;
