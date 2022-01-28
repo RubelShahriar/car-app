@@ -7,7 +7,7 @@ import './Products.css';
 const Products = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('https://tranquil-hollows-86813.herokuapp.com/cars')
+        fetch('https://tranquil-hollows-86813.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setPackages(data.slice()))
     }, [])
@@ -21,13 +21,13 @@ const Products = () => {
                 {packages.map(packages => 
                 <div className='item'>
                     <div className='image'>
-                        <img src={packages.image} alt=''></img>
+                        <img src={`data:image/png;base64,${packages.image}`} alt=''></img>
                     </div>
                     <div className='car-info'>
-                        <h3 style={{marginTop: 0}}>Brand: {packages.name}</h3>
+                        <h3 style={{marginTop: 0}}>Brand: {packages.productName}</h3>
                         <div style={{display: 'flex'}}><p style={{marginBottom: 0}}><LocationOn className='icon'/> {packages.place}</p>
-                        <p style={{marginBottom: 0, marginLeft: '10px'}}><EventNoteRounded className='icon'/>Model: {packages.version}</p></div>
-                        <p style={{fontSize: '20px'}}> Price: ${packages.discountPrice} - <span style={{textDecoration: 'line-through 2px', color: 'gray', fontWeight: 'bold'}}> ${packages.discountPrice}</span></p>
+                        <p style={{marginBottom: 0, marginLeft: '10px'}}><EventNoteRounded className='icon'/>Model: {packages.versionYear}</p></div>
+                        <p style={{fontSize: '20px'}}> Price: ${packages.originalPrice} - <span style={{textDecoration: 'line-through 2px', color: 'gray', fontWeight: 'bold'}}> ${packages.discountPrice}</span></p>
                         <Link style={{marginRight: '15px'}} to={`/purchase/${packages._id}`}><button>Details</button></Link>
                         <Link to={`/purchase/${packages._id}`}><button>Purchase</button></Link>
                     </div>

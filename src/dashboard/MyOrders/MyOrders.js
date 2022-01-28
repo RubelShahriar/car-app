@@ -47,7 +47,7 @@ const MyOrders = () => {
                 </thead>
                     {packages.map(packages => 
                         <tr>
-                            <td><img style={{width: '100px', borderRadius: '5px'}} src={packages.image} alt=''></img></td>
+                            <td><img style={{width: '100px', borderRadius: '5px'}} src={`data:image/png;base64,${packages.image}`} alt=''></img></td>
                             <td>{packages.name}</td>
                             <td>{packages.place}</td>
                             <td>${packages.discountPrice}</td>

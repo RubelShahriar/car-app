@@ -13,6 +13,7 @@ const AddProduct = () => {
     const [description, setDiscription] = useState('')
     const {user} = useAuth();
     const {displayName, email} = user;
+    //handle add product form submit
     const handleAddProduct = e => {
         e.preventDefault();
         const formData = new FormData();
@@ -26,7 +27,7 @@ const AddProduct = () => {
         formData.append('versionYear', versionYear)
         formData.append('description', description)
         //fetch car api 
-        fetch('https://tranquil-hollows-86813.herokuapp.com/cars', {
+        fetch('https://tranquil-hollows-86813.herokuapp.com/products', {
             method: 'POST',
             body: formData
             })
@@ -34,7 +35,6 @@ const AddProduct = () => {
             .then(data => {
                 if(data.insertedId){
                     alert('Product Added Successfully')
-                    e.target.reset()
                 }
             })
             .catch(error => {
