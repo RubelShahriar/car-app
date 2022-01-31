@@ -37,7 +37,7 @@ const ManageOrder = () => {
     return (
         <div>
             <div className='orders'>
-            <h2 style={{marginTop: '0'}}>Manage Orders</h2>
+            <h2 style={{marginTop: '0'}}>Manage All Orders</h2>
                 {!order.length ? 
                 <CircularProgress style={{marginTop: '10%'}}/> : 
                 <table style={{margin: '0 auto', borderCollapse: 'collapse', width: '95%'}}>
