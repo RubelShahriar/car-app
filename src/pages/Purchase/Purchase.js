@@ -11,7 +11,7 @@ const Purchase = () => {
     const {id} = useParams();
     const dateString  = new Date().toLocaleDateString();
     const [carInfo, setCarInfo] = useState({})
-    const {productName, image, place, description, discountPrice} = carInfo;
+    const {productName, image, place, description, versionYear, discountPrice} = carInfo;
     const [phone, setPhone] = useState('')
     const [address, setaddress] = useState('')
     const [country, setCountry] = useState('')
@@ -24,9 +24,9 @@ const Purchase = () => {
     }, [])
 
     const handlePlaceOrder = e => {
-        const packageInfo = {displayName, email, productName, image, place, discountPrice, phone, address, country, postalCode, dateString};
-        fetch('https://tranquil-hollows-86813.herokuapp.com/products', { 
-            method: '',
+        const packageInfo = {displayName, email, productName, place, discountPrice,versionYear, phone, address, country, postalCode, dateString};
+        fetch('https://tranquil-hollows-86813.herokuapp.com/orderedItem', { 
+            method: 'post',
             headers:{
                 'content-type': 'application/json'
             },

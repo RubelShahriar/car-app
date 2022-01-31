@@ -1,4 +1,5 @@
-import { Alert } from '@mui/material';
+import { Alert, Grid } from '@mui/material';
+import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import './MakeAdmin.css';
 
@@ -28,18 +29,24 @@ const MakeAdmin = () => {
         e.preventDefault();
     }
     return (
-        <div className='admin-flex'>
-            <div className='admin-image'>
-            </div>
+        <Box sx={{display: 'flex'}}>
+        <Grid xs={12} sm={1} md={2} lg={3}>
+        </Grid>
+        <Grid xs={12} sm={10} md={8} lg={6}>
             <div className='make-admin'>
-                <h3>Make An Admin</h3>
+                <h3 style={{fontSize: '25px'}}>Make An Admin</h3>
                 <form onSubmit={handleOnsubmit}>
-                    <input type='email' onBlur={getValueFromInput} placeholder='Enter a email'></input>
+                    <input type='email' onBlur={getValueFromInput} placeholder='Enter an user email'></input>
                     <button type='submit'>Make Admin</button>
                 </form>
-                {success && <Alert severity="success">made admin successfully — check it out!</Alert>}
+                {success && <Alert sx={{mt: '10px',}} severity="success">Made An Admin Successfully — check it out!</Alert>}
+                <div className='note'>
+                    <span style={{fontWeight: 'bold'}}>Note: </span>Only An Admin can make another user to Admin. Admin have some speacial freature like he can see and access some hidden page of this website. Also he can make another user role to admin. If you are not an Admin - Please skip this page. 
+                </div>
             </div>
-        </div>
+        </Grid>
+        <Grid xs={12} sm={1} md={2} lg={3}></Grid>
+    </Box>
     );
 };
 

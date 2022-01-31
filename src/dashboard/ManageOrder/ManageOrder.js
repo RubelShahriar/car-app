@@ -6,7 +6,7 @@ import { CircularProgress } from '@mui/material';
 const ManageOrder = () => {
     const [order, setOrder] = useState([]);
     useEffect(() => {
-        fetch('https://tranquil-hollows-86813.herokuapp.com/orders')
+        fetch('https://tranquil-hollows-86813.herokuapp.com/orderedItem')
         .then(res => res.json())
         .then(data => setOrder(data))
     }, [])
@@ -19,7 +19,7 @@ const ManageOrder = () => {
     const handleDeleteOrder = id => {
         const confirmation = window.confirm('Are you sure, you want to delete this order?')
         if(confirmation){
-            const url = `https://tranquil-hollows-86813.herokuapp.com/orders/${id}`;
+            const url = `https://tranquil-hollows-86813.herokuapp.com/orderedItem/${id}`;
             fetch(url, {
                 method: 'delete'
             })
@@ -58,7 +58,7 @@ const ManageOrder = () => {
                         <td><input type='checkbox'></input></td>
                         <td>{order._id}</td>
                         <td>{order.dateString}</td>
-                        <td>{order.name}</td>
+                        <td>{order.productName}</td>
                         <td>{order.displayName}</td>
                         <td>${order.discountPrice}</td>
                         <td><p style={{color: '#9B59B6', margin: '0', border: '1px solid #9B59B6', borderRadius:'5px', background: '#F5EEF8', cursor: 'pointer'}} onClick={(e) => changeStatus(e)}>pending...</p></td>

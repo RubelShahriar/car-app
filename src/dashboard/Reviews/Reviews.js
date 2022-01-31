@@ -44,10 +44,10 @@ const Reviews = () => {
                 </div>
                 <div>
                     <form onSubmit={handleAddReview}>
-                        <TextField sx={{width: '75%', mb: 2}} type='text' required id="outlined-required" label=" Your Name" defaultValue={displayName}/>
-                        <TextField sx={{width: '75%', mb: 2}} type='email' required id="outlined-required" label=" Your Email" defaultValue={email}/>
-                        <TextField sx={{width: '75%', mb: 2}} type='text' required id="outlined-required" label=" Your City" ref={cityRef}/>
-                        <TextField sx={{width: '75%', mb: 2}} type='number' required id="outlined-required" label=" Your Rating" ref={ratingRef}/>
+                        <TextField className='input' sx={{width: '75%', mb: 2}} type='text' required label=" Your Name" defaultValue={displayName}/>
+                        <TextField className='input' sx={{width: '75%', mb: 2}} type='email' required label=" Your Email" defaultValue={email}/>
+                        <TextField className='input' sx={{width: '75%', mb: 2}} type='text' required label=" Your City" ref={cityRef}/>
+                        <TextField className='input' sx={{width: '75%', mb: 2}} type='number' required label=" Your Rating" ref={ratingRef}/>
                         <TextareaAutosize className='textarea' minRows={4} placeholder="Write a review" ref={reviewRef} required/>
                         <Button className='btn' sx={{width: '75%', mb: 2}} type='submit' variant='contained'>Submit</Button>
                     </form>

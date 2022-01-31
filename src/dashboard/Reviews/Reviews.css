@@ -4,6 +4,9 @@
     border-radius: 15px;
     background-color: rgba(241, 241, 241, .9);
 }
+.add-review .input{
+    font-family: 'El Messiri', sans-serif !important;
+}
 .add-review .a-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -15,6 +18,8 @@
     border-radius: 10px;
 }
 .add-review .textarea{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 16px;
     width: 75%;
     height: 100px !important;
     resize: none;
