@@ -55,3 +55,30 @@
     margin-bottom: -5px;
     margin-right: 10px;
 }
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .dashboard .grid{
+    grid-template-columns: 1fr;
+
+    }
+.dashboard .dashboard-image{
+    height: 400px;
+}
+
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .background{
+        padding: 120px 0px;
+    }
+    .background .find{
+        margin-left: 40px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .background{
+        padding: 140px 0px;
+    }
+    .background .find{
+        margin-left: 140px;
+    }
+}

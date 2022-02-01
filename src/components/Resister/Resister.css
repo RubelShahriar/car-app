@@ -1,8 +1,44 @@
 .grid{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+}
+.resister{
+    height: 100vh;
+}
+.resister .alignment{
+    font-family: 'El Messiri', sans-serif;
 }
 .resister .signup-btn{
     font-family: 'El Messiri', sans-serif;
     font-size: 20px;
+}
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .grid{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .resister .alignment{
+        width: 90% !important;
+    }
+    .resister .signup-btn{
+        width: 90% !important;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .background{
+        padding: 120px 0px;
+    }
+    .background .find{
+        margin-left: 40px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .background{
+        padding: 140px 0px;
+    }
+    .background .find{
+        margin-left: 140px;
+    }
 }

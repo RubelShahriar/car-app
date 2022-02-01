@@ -1,0 +1,43 @@
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .second .option{
+        display: block !important;
+        margin: 20px 0px !important;
+    }
+    .second .hover{
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .footer .flex {
+        flex-wrap: wrap;
+    }
+    .footer .flex .logo{
+        width: 50%;
+    }
+    .footer .flex .contact{
+        width: 45%;
+    }
+    .footer .flex .links{
+        width: 40%;
+        padding-left: 30px;
+    }
+    .footer .flex .subscribe{
+        width: 50%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .footer .flex .logo{
+        width: 28%;
+    }
+    .footer .flex .contact{
+        width: 24%;
+    }
+    .footer .flex .links{
+        width: 20%;
+        padding-left: 30px;
+    }
+    .footer .flex .subscribe{
+        width: 24%;
+    }
+}

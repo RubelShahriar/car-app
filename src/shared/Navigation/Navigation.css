@@ -18,12 +18,12 @@
     }
     .navigation .nav-item{
         font-size: 14px;
-        margin-right: 10px;
+        margin-left: 10px !important;
     }
 }
 @media (min-width: 576px) and (max-width: 767px){
     .navigation img{
-        width: 150px;
+        width: 100px;
     }
     .navigation .nav-item{
         margin-right: 10px;

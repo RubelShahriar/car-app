@@ -58,7 +58,7 @@ const Purchase = () => {
                     <img src={`data:image/png;base64,${image}`} alt=''></img>
                     <h2 style={{marginBottom: '-10px'}}>Description:</h2>
                     <p style={{fontSize: '18px'}}>{description}</p>
-                    <p style={{padding: '5px 20px', fontSize: '18px', background: 'goldenrod', display: 'inline'}}>We hope that you have found your Dream car</p>
+                    <p className='para' style={{padding: '5px 20px', fontSize: '18px', background: 'goldenrod', display: 'inline'}}>We hope that you have found your Dream car</p>
                 </div>
                 <div className='right' style={{textAlign: 'center'}}>
                     <h3>Book Your Order</h3>

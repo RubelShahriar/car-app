@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 import useAuth from '../../hooks/useAuth';
 import logo from '../../components/images/car-logo-car-leader.svg';
 import { LoginRounded } from '@mui/icons-material';
@@ -16,7 +16,7 @@ const Navigation = () => {
               <AppBar sx={{bgcolor: 'white', height: 60}} className='navigation' position="fixed">
                 <Container>
                   <Toolbar>
-                    <Box sx={{width: 200, cursor: 'pointer'}}>
+                    <Box sx={{width: 100, cursor: 'pointer'}}>
                       <Link to='/'><img src={logo} alt=''></img></Link>
                     </Box>
                       <Box sx={{ml: 'auto'}}>

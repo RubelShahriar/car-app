@@ -1,17 +1,49 @@
 .login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
 }
-.login h2{
-    margin-top: 100px;
-    margin-bottom: -80px;
+.log-in-top{
+    height: 100vh;
 }
-.login .heading{
-    text-align: center;
+.login .input-alignment{
+    width: 70%;
+    margin: 15px auto;
 }
 .login .display{
     font-family: 'El Messiri', sans-serif;
     font-size: 20px;
     margin-bottom: 20px;
+    width: 70%;
+}
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .login{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .login .input-alignment{
+        width: 90%;
+        margin: 15px auto;
+    }
+    .login .display{
+        margin-bottom: 10px;
+        width: 90%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .background{
+        padding: 120px 0px;
+    }
+    .background .find{
+        margin-left: 40px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .background{
+        padding: 140px 0px;
+    }
+    .background .find{
+        margin-left: 140px;
+    }
 }

@@ -34,7 +34,7 @@ const Resister = () => {
         <>
         <Navigation></Navigation>
         <div className='resister'>
-                        <div style={{textAlign: 'center', marginTop: '100px', marginBottom: '30px'}}><h2>Create a new Accout</h2></div>
+                        <div style={{textAlign: 'center',  marginTop: '100px', marginBottom: '30px'}}><h2>Create a new Accout</h2></div>
             <div className='grid'>
                         <div></div>
                         <div style={{textAlign: 'center'}}>
@@ -43,30 +43,33 @@ const Resister = () => {
                                     <div><TextField
                                     className='alignment'
                                     id="outlined-basic" 
-                                    sx= {{ width: '60%', mb: 2 }}
+                                    sx= {{ width: '70%', mb: 2 }}
                                     onBlur={getInputValue}
                                     name='name'
                                     label="Name" 
                                     variant="outlined" /></div>
                                     <div><TextField
+                                    className='alignment'
                                     id="outlined-basic" 
-                                    sx= {{ width: '60%', mb: 2 }}
+                                    sx= {{ width: '70%', mb: 2 }}
                                     onBlur={getInputValue}
                                     name='email'
                                     label="Email" 
                                     type='email'
                                     variant="outlined" /></div>
                                     <div><TextField
+                                    className='alignment'
                                     id="outlined-basic" 
-                                    sx={{width:'60%', mb: 2}} 
+                                    sx={{width:'70%', mb: 2}} 
                                     label="Password" 
                                     onBlur={getInputValue}
                                     name='password'
                                     type='password' 
                                     variant="outlined" /></div>
                                     <div><TextField
+                                    className='alignment'
                                     id="outlined-basic" 
-                                    sx={{width:'60%', mb: 2}} 
+                                    sx={{width:'70%', mb: 2}} 
                                     label="Re-enter Password" 
                                     onBlur={getInputValue}
                                     name='password2'
@@ -76,15 +79,15 @@ const Resister = () => {
                                     className='signup-btn'
                                     variant="contained" 
                                     type='submit' 
-                                    sx={{width: '60%', mb: 2}}> 
+                                    sx={{width: '70%', mb: 2}}> 
                                     Resister
                                     </Button>
                                 </form>
                             }
                                 {isLoading && <CircularProgress />}
-                                <div style={{width: '60%', margin: '0 auto'}}>{user.email && <Alert  severity="success">This is a success alert — check it out!</Alert>}
+                                <div style={{width: '70%', margin: '0 auto'}}>{user.email && <Alert  severity="success">This is a success alert — check it out!</Alert>}
                                 </div>
-                                <div style={{width: '60%', margin: '0 auto'}}>{errors && <Alert severity="error">
+                                <div style={{width: '70%', margin: '0 auto'}}>{errors && <Alert severity="error">
                                     <AlertTitle>{errors}</AlertTitle>
                                     This is an error alert — <strong>check it out!</strong>
                                     </Alert>}

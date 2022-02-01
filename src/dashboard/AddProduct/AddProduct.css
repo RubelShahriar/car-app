@@ -14,3 +14,32 @@
     height: 480px;
     border-radius: 10px;
 }
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .add-product .a-grid{
+        grid-template-columns: 1fr;
+    }
+.add-product .a-grid .image img{
+    margin-bottom: 20px;
+    height: 250px;
+}
+.add-product{
+    height: 110vh;
+}
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .background{
+        padding: 120px 0px;
+    }
+    .background .find{
+        margin-left: 40px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .background{
+        padding: 140px 0px;
+    }
+    .background .find{
+        margin-left: 140px;
+    }
+}

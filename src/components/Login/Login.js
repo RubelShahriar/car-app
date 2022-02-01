@@ -32,36 +32,39 @@ const Login = () => {
     return (
         <>
         <Navigation></Navigation>
-        <div className='login'>
-            <div>
-                <div className='heading'><h2>Log In Here!</h2></div>
-            <div><form onSubmit={handleLoginSubmit}>
-                <TextField
-                 id="outlined-basic" 
-                 sx= {{ width: '1', mt: 20, mb: 2 }}
-                 onBlur={getInputValue}
-                 name='email'
-                 label="Email" 
-                 type='email'
-                 variant="outlined" />
-                <TextField
-                 id="outlined-basic" 
-                 sx={{width:'1', mb: 2}} 
-                 label="Password" 
-                 onBlur={getInputValue}
-                 name='password'
-                 type='password' 
-                 variant="outlined" />
-                <Button variant="contained" className='display'type='submit' sx={{width: '1'}}>Sign In</Button>
-            </form></div>
-            <p>New User? Please <Link to='/resister'>Resister</Link> OR,</p>
-            <div><Button sx={{width:'1', mb: 2}}  onClick={handleGoogleSignIn} className='display' variant="contained">Sign In With Google</Button></div>
-            {isLoading && <CircularProgress />}
-            <div>{user.email && <Alert  severity="success">This is a success alert — check it out!</Alert>}</div>
-            <div>{errors && <Alert severity="error">
-                <AlertTitle>{errors}</AlertTitle>
-                This is an error alert — <strong>check it out!</strong>
-                </Alert>}</div>
+        <div className='log-in-top'>
+                <div style={{textAlign: 'center',  marginTop: '100px', marginBottom: '30px'}}><h2>Log in Here</h2></div>
+            <div className='login'>
+                <div></div>
+                <div style={{textAlign: 'center' }}>
+                    <form onSubmit={handleLoginSubmit}>
+                    <TextField
+                    className='input-alignment'
+                    id="outlined-basic" 
+                    sx= {{ width: '1',  mb: 3 }}
+                    onBlur={getInputValue}
+                    name='email'
+                    label="Email" 
+                    type='email'
+                    variant="outlined" />
+                    <TextField
+                    className='input-alignment'
+                    id="outlined-basic" 
+                    sx={{width:'1', mb: 2}} 
+                    label="Password" 
+                    onBlur={getInputValue}
+                    name='password'
+                    type='password' 
+                    variant="outlined" />
+                    <Button variant="contained" className='display'type='submit'>Sign In</Button>
+                    </form>
+                    <p>New User? Please <Link to='/resister'>Resister</Link> OR,</p>
+                    <Button sx={{ mb: 2}}  onClick={handleGoogleSignIn} className='display' variant="contained">Sign In With Google</Button>
+                    {isLoading && <CircularProgress />}
+                    {user.email && <Alert className='input-alignment' severity="success">This is a success alert — check it out!</Alert>}
+                    {errors && <Alert className='input-alignment' severity="error"><AlertTitle>{errors}</AlertTitle>This is an error alert — <strong>check it out!</strong></Alert>}
+                </div>
+                <div></div>
             </div>
         </div>
         </>
