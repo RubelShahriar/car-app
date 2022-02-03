@@ -15,7 +15,6 @@ import AddProduct from '../../dashboard/AddProduct/AddProduct';
 import Reviews from '../../dashboard/Reviews/Reviews';
 import useAuth from '../../hooks/useAuth';
 import ManageOrder from '../../dashboard/ManageOrder/ManageOrder';
-import Payment from '../../dashboard/Payment/Payment';
 import Home from '../Home/Home'
 import './Dashboard.css';
 import { AddBoxRounded, AddCommentRounded, AnalyticsRounded, GridViewRounded, HomeRounded, LogoutRounded, PersonAddAlt1Rounded, ShoppingCartRounded } from '@mui/icons-material';
@@ -143,9 +142,6 @@ function Dashboard(props) {
         </Route>
         <Route exact path={`${path}/manage-order`}>
           <ManageOrder></ManageOrder>
-        </Route>
-        <Route exact path={`${path}/pay`}>
-          <Payment></Payment>
         </Route>
       </Switch>
       </Box>
