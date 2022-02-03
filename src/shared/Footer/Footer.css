@@ -15,13 +15,17 @@
     font-size: 30px;
     padding: 5px;
     border-radius: 5px;
-    margin-top: 20px;
 }
 .footer .flex .logo .icon:hover{
     cursor: pointer;
     background: #ffb400;
     color: white;
     transition: .4s;
+}
+.footer .logo img{
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
 }
 .footer .flex .contact .inner p{
     margin-left: 25px;
@@ -53,44 +57,36 @@
     background: white;
     padding: 2px;
     border-radius: 2px;
+    margin-right: 3px;
 }
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px){
     .footer .flex {
-        grid-template-columns: 1fr;
+        grid-template-columns: 0.8fr;
         gap: 10px;
+    }
+    .footer .flex .subscribe .input{
+        margin-bottom: 10px;
+        margin-right: 5px;
     }
 }
 @media (min-width: 576px) and (max-width: 767px){
     .footer .flex {
-        flex-wrap: wrap;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
-    .footer .flex .logo{
-        width: 50%;
-    }
-    .footer .flex .contact{
-        width: 45%;
-    }
-    .footer .flex .links{
-        width: 40%;
-        padding-left: 30px;
-    }
-    .footer .flex .subscribe{
-        width: 50%;
+    .footer .flex .subscribe .input{
+        margin-bottom: 10px;
+        margin-right: 5px;
     }
 }
 @media (min-width: 768px) and (max-width: 991px){
-    .footer .flex .logo{
-        width: 28%;
+    .footer .flex {
+        grid-template-columns: 1.2fr 1.2fr 0.5fr 1fr;
+        gap: 10px;
     }
-    .footer .flex .contact{
-        width: 24%;
-    }
-    .footer .flex .links{
-        width: 20%;
-        padding-left: 30px;
-    }
-    .footer .flex .subscribe{
-        width: 24%;
+    .footer .flex .subscribe .input{
+        margin-bottom: 10px;
+        margin-right: 5px;
     }
 }

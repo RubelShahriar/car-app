@@ -1,4 +1,7 @@
-
+.navigation .image{
+    cursor: pointer;
+    width: 150px;
+}
 .navigation .menu-icon{
     display: none;
 }
@@ -13,6 +16,9 @@
 }
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px){
+    .navigation .image{
+        width: 100px;
+    }
     .navigation img{
         width: 100px;
     }
@@ -22,6 +28,9 @@
     }
 }
 @media (min-width: 576px) and (max-width: 767px){
+    .navigation .image{
+        width: 100px;
+    }
     .navigation img{
         width: 100px;
     }
@@ -30,6 +39,9 @@
     }
 }
 @media (min-width: 768px) and (max-width: 991px){
+    .navigation .image{
+        width: 100px;
+    }
     .navigation img{
         width: 200px;
     }

@@ -9,7 +9,23 @@
 .notfound h2{
     display: inline-block;
     color: white;
-    background: red;
-    padding: 10px 25px;
+    background: blue;
+    padding: 10px 20px;
     border-radius: 10px;
+}
+/* Responisve part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .notfound h2{
+        padding: 4px 8px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .notfound h2{
+        padding: 6px 15px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .notfound h2{
+        padding: 10px 20px;
+    }
 }

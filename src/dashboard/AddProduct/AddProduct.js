@@ -51,14 +51,14 @@ const AddProduct = () => {
             </div>
             <div>
                 <form onSubmit={handleAddProduct}>
-                    <Input sx={{width: '75%', mb: 2}} accept="image/*" type="file" onChange={(e) => setImage(e.target.files[0])} />
-                    <TextField sx={{width: '75%', mb: 2}} id="standard-required" onChange={(e) => setProductName(e.target.value)} type='text' variant='standard' label="Product Name" required/>
-                    <TextField sx={{width: '75%', mb: 2}} id="standard-required" onChange={(e) => setPlace(e.target.value)} type='text' variant='standard' label="Place" required/>
-                    <TextField sx={{width: '75%', mb: 2}} id="standard-required" onChange={(e) => setOriginalPrice(e.target.value)} type='number' variant='standard' label="Product Price" required/>
-                    <TextField sx={{width: '75%', mb: 2}} id="standard-required" onChange={(e) => setDiscountPrice(e.target.value)} type='number' variant='standard' label="Discount Price" required/>
-                    <TextField sx={{width: '75%', mb: 2}} id="standard-required" onChange={(e) => setVersionYear(e.target.value)} type='number' variant='standard' label="Version Year" required/>
-                    <TextField sx={{width: '75%', mb: 3}} id="standard-required" onChange={(e) => setDiscription(e.target.value)} type='text' variant='standard' label="Product Description" required/>
-                    <Button sx={{width: '75%'}} type='submit' variant='contained'>Add Product</Button>
+                    <Input className='input' accept="image/*" type="file" onChange={(e) => setImage(e.target.files[0])} />
+                    <TextField className='input' id="standard-required" onChange={(e) => setProductName(e.target.value)} type='text' variant='standard' label="Product Name" required/>
+                    <TextField className='input' id="standard-required" onChange={(e) => setPlace(e.target.value)} type='text' variant='standard' label="Place" required/>
+                    <TextField className='input' id="standard-required" onChange={(e) => setOriginalPrice(e.target.value)} type='number' variant='standard' label="Product Price" required/>
+                    <TextField className='input' id="standard-required" onChange={(e) => setDiscountPrice(e.target.value)} type='number' variant='standard' label="Discount Price" required/>
+                    <TextField className='input' id="standard-required" onChange={(e) => setVersionYear(e.target.value)} type='number' variant='standard' label="Version Year" required/>
+                    <TextField className='input' id="standard-required" onChange={(e) => setDiscription(e.target.value)} type='text' variant='standard' label="Product Description" required/>
+                    <Button className='input' type='submit' variant='contained'>Add Product</Button>
                 </form>
             </div>
         </div>

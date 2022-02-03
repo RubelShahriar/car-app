@@ -36,11 +36,10 @@
 @media (min-width: 320px) and (max-width: 575px){
     .add-review .a-grid{
         grid-template-columns: 1fr;
-
     }
-.add-review{
-    height: 100vh;
-}
+    .add-review{
+        height: 175vh;
+    }   
     .add-review .input{
         width: 100% !important;
     }
@@ -48,27 +47,55 @@
         height: 250px;
         margin-bottom: 20px;
     }
-.add-review .btn{
-    width: 100%;
-    margin-top: 10px;
-}
-.add-review .textarea{
-    width: 100%;
-}
+    .add-review .btn{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .add-review .textarea{
+        width: 100%;
+    }   
 }
 @media (min-width: 576px) and (max-width: 767px){
-    .background{
-        padding: 120px 0px;
+    .add-review .a-grid{
+        grid-template-columns: 1fr;
     }
-    .background .find{
-        margin-left: 40px;
+    .add-review{
+        height: 175vh;
+    }   
+    .add-review .input{
+        width: 100% !important;
     }
+    .add-review .a-grid .image img{
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .add-review .btn{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .add-review .textarea{
+        width: 100%;
+    }   
 }
 @media (min-width: 768px) and (max-width: 991px){
-    .background{
-        padding: 140px 0px;
+    .add-review .a-grid{
+        grid-template-columns: 1fr;
     }
-    .background .find{
-        margin-left: 140px;
+    .add-review{
+        height: 175vh;
+    }   
+    .add-review .input{
+        width: 100% !important;
     }
+    .add-review .a-grid .image img{
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .add-review .btn{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .add-review .textarea{
+        width: 100%;
+    }   
 }

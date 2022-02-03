@@ -1,5 +1,5 @@
 .add-product{
-    height: 85vh;
+    height: 80vh;
     padding: 30px;
     border-radius: 15px;
     background-color: rgba(241, 241, 241, .9);
@@ -14,32 +14,56 @@
     height: 480px;
     border-radius: 10px;
 }
+.add-product .input{
+    width: 75%;
+    margin-bottom: 15px;
+}
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px){
     .add-product .a-grid{
         grid-template-columns: 1fr;
     }
-.add-product .a-grid .image img{
-    margin-bottom: 20px;
-    height: 250px;
-}
-.add-product{
-    height: 110vh;
+    .add-product .a-grid .image img{
+        margin-bottom: 20px;
+        height: 250px;
+    }
+    .add-product{
+        height: 185vh;
+    }
+    .add-product .input{
+        width: 100%;
+        margin-bottom: 15px;
 }
 }
 @media (min-width: 576px) and (max-width: 767px){
-    .background{
-        padding: 120px 0px;
+    .add-product .a-grid{
+        grid-template-columns: 1fr;
     }
-    .background .find{
-        margin-left: 40px;
+    .add-product .a-grid .image img{
+        margin-bottom: 20px;
+        height: 250px;
     }
+    .add-product{
+        height: 185vh;
+    }
+    .add-product .input{
+        width: 100%;
+        margin-bottom: 15px;
+}
 }
 @media (min-width: 768px) and (max-width: 991px){
-    .background{
-        padding: 140px 0px;
+    .add-product .a-grid{
+        grid-template-columns: 1fr;
     }
-    .background .find{
-        margin-left: 140px;
+    .add-product .a-grid .image img{
+        margin-bottom: 20px;
+        height: 250px;
     }
+    .add-product{
+        height: 185vh;
+    }
+    .add-product .input{
+        width: 100%;
+        margin-bottom: 15px;
+}
 }

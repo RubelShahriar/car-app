@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './Footer.css';
-import logo  from '../../components/images/logo.png';
+import logo  from '../../components/images/car-logo-car-leader.svg';
 import { Email, Facebook, Google, LinkedIn, LocationCityOutlined, LocationOn, Phone, Send, Twitter, } from '@mui/icons-material';
 import { Button, Container, Input } from '@mui/material';
 
@@ -20,7 +20,7 @@ const Footer = () => {
                 <div className='flex'>
                     <div className='logo'>
                         <img src={logo} alt=''></img>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat.</p>
+                        <p>Our industry-leading online auto loan application puts you in the driver's seat with the information you need to make a decision on your next used car purchase. Each online auto loan approval is 100% personalized to you</p>
                         <Facebook className='icon'></Facebook>
                         <Twitter className='icon'></Twitter>
                         <Google className='icon'></Google>
@@ -53,8 +53,6 @@ const Footer = () => {
                             <li>Services</li>
                             <li>Car Listing</li>
                             <li>Blog</li>
-                            <li>Contact Us</li>
-                            <li>Elements</li>
                         </ul>
                     </div>
                     <div className='subscribe'>

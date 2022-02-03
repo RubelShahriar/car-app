@@ -21,8 +21,16 @@ import './Dashboard.css';
 import { AddBoxRounded, AddCommentRounded, AnalyticsRounded, GridViewRounded, HomeRounded, LogoutRounded, PersonAddAlt1Rounded, ShoppingCartRounded } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 
+//drawer width
 const drawerWidth = 240;
+
 function Dashboard(props) {
+  const [packages, setPackages] = React.useState([]);
+    React.useEffect(() => {
+        fetch(`https://tranquil-hollows-86813.herokuapp.com/orderedItem?email=${user.email}`)
+        .then(res => res.json())
+        .then(data => setPackages(data))
+    }, [packages])
   const {admin,user, logout} = useAuth();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -38,7 +46,7 @@ function Dashboard(props) {
       <Link className='d-link' to={`/home`} style={{marginTop: '30px'}}><HomeRounded className='sidebar-icon'/>Back to Home</Link>
         <Link className='d-link' to={`${url}`}><GridViewRounded className='sidebar-icon'/>Dashboard</Link>
         <Link className='d-link' to={`${url}/add-product`}><AddBoxRounded className='sidebar-icon'/>Add Product</Link>
-        <Link className='d-link' to={`${url}/my-orders`}><ShoppingCartRounded className='sidebar-icon'/>My Orders<Badge badgeContent={4} color='secondary' sx={{ml: 2}}></Badge></Link>
+        <Link className='d-link' to={`${url}/my-orders`}><ShoppingCartRounded className='sidebar-icon'/>My Orders<Badge badgeContent={packages.length} color='secondary' sx={{ml: 2}}></Badge></Link>
         <Link className='d-link' to={`${url}/reviews`}><AddCommentRounded className='sidebar-icon'/>Add a Review</Link>
         <Link className='d-link' to={`${url}/manage-order`}><AnalyticsRounded className='sidebar-icon'/>Manage Order</Link>
          <Link className='d-link' to={`${url}/make-admin`}><PersonAddAlt1Rounded className='sidebar-icon'/>Make Admin</Link>
