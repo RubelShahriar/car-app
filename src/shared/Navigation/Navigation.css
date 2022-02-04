@@ -24,7 +24,7 @@
     }
     .navigation .nav-item{
         font-size: 14px;
-        margin-left: 10px !important;
+        margin-left: 8px !important;
     }
 }
 @media (min-width: 576px) and (max-width: 767px){

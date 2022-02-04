@@ -4,13 +4,16 @@ import useAuth from '../../hooks/useAuth';
 import './MyOrders.css';
 
 const MyOrders = () => {
-  const [packages, setPackages] = useState([]);
     const {user} = useAuth();
+    const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch(`https://tranquil-hollows-86813.herokuapp.com/orderedItem?email=${user.email}`)
-        .then(res => res.json())
-        .then(data => setPackages(data))
-    }, [])
+        async function fetchData(){
+            await fetch(`https://tranquil-hollows-86813.herokuapp.com/orderedItem?email=${user.email}`)
+            .then(res => res.json())
+            .then(data => setPackages(data))
+        }
+        fetchData()
+    }, [packages, user.email])
 
     const handleDeleteOrder = id => {
         const confirmation = window.confirm('Are you sure, you want to delete this order?')

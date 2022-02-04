@@ -23,32 +23,34 @@
 @media (min-width: 320px) and (max-width: 575px){
     .background{
         padding: 150px 0px;
-        color:   #154360  !important;
     }
-    .background .font{
-        font-size: 20px !important;
+    .background .heading{
+        font-size: 30px;
+        width: auto;
+        margin-top: 20px;
+    }
+    .background .sub-heading{
+        margin-bottom: -15px;
     }
     .background .find{
         margin-left: 40px;
     }
-    .background .text-margin{
-        margin-left: 0 !important;
-
-    }
 }
 @media (min-width: 576px) and (max-width: 767px){
     .background{
-        padding: 120px 0px;
+        padding: 150px 0px;
+    }
+    .background .heading{
+        font-size: 30px;
+        width: auto;
+        margin-top: 20px;
+    }
+    .background .sub-heading{
+        margin-bottom: -15px;
     }
     .background .find{
         margin-left: 40px;
     }
 }
 @media (min-width: 768px) and (max-width: 991px){
-    .background{
-        padding: 140px 0px;
-    }
-    .background .find{
-        margin-left: 140px;
-    }
 }

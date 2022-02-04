@@ -24,16 +24,18 @@ import { Badge } from '@mui/material';
 const drawerWidth = 240;
 
 function Dashboard(props) {
+  const {admin,user, logout} = useAuth();
+  let { path, url } = useRouteMatch();
+  const styles = {background: '#f1f1f1', fontSize: '16px', fontFamily: 'El Messiri, sans-serif', width: '200px', borderRadius: '5px', margin: '0 auto 15px auto', listStyle: 'none', padding: '8px 18px' }
+  const linkStyles = {textDecoration: 'none', color:'#34495E' }
   const [packages, setPackages] = React.useState([]);
     React.useEffect(() => {
         fetch(`https://tranquil-hollows-86813.herokuapp.com/orderedItem?email=${user.email}`)
         .then(res => res.json())
         .then(data => setPackages(data))
     }, [packages])
-  const {admin,user, logout} = useAuth();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  let { path, url } = useRouteMatch();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -42,16 +44,36 @@ function Dashboard(props) {
       <Toolbar />
         <Box style={{textAlign: 'center'}}><p style={{fontWeight: '700', margin: '0 auto', color: 'white', fontSize: '30px'}}>CaLeader</p></Box>
       <Divider />
-      <Link className='d-link' to={`/home`} style={{marginTop: '30px'}}><HomeRounded className='sidebar-icon'/>Back to Home</Link>
-        <Link className='d-link' to={`${url}`}><GridViewRounded className='sidebar-icon'/>Dashboard</Link>
-        <Link className='d-link' to={`${url}/add-product`}><AddBoxRounded className='sidebar-icon'/>Add Product</Link>
-        <Link className='d-link' to={`${url}/my-orders`}><ShoppingCartRounded className='sidebar-icon'/>My Orders<Badge badgeContent={packages.length} color='secondary' sx={{ml: 2}}></Badge></Link>
-        <Link className='d-link' to={`${url}/reviews`}><AddCommentRounded className='sidebar-icon'/>Add a Review</Link>
-        <Link className='d-link' to={`${url}/manage-order`}><AnalyticsRounded className='sidebar-icon'/>Manage Order</Link>
-         <Link className='d-link' to={`${url}/make-admin`}><PersonAddAlt1Rounded className='sidebar-icon'/>Make Admin</Link>
+      <ul style={{paddingLeft: '0', margin: '30px 0  0'}}>
+        <li style={styles}>
+          <Link className='d-link' to={`/home`} style={{marginTop: '30px', textDecoration: 'none', color:'#34495E' }}><HomeRounded sx={{mb: '-5px', mr: 1}} className='sidebar-icon'/>Back to Home</Link>
+        </li>
+        <li style={styles}>
+          <Link className='d-link' to={`${url}`} style={linkStyles}><GridViewRounded sx={{mb: '-5px', mr: 1}} className='sidebar-icon'/>Dashboard</Link>
+        </li>
+        <li style={styles}>
+          <Link className='d-link' to={`${url}/add-product`} style={linkStyles}><AddBoxRounded sx={{mb: '-5px', mr: 1}} className='sidebar-icon'/>Add Product</Link>
+        </li>
+        <li style={styles}>
+          <Link className='d-link' to={`${url}/my-orders`} style={linkStyles}><ShoppingCartRounded sx={{mb: '-5px', mr: 1}} className='sidebar-icon'/>My-orders<Badge badgeContent={packages.length} color='secondary' sx={{ml: 2}}></Badge></Link>
+        </li>
+        <li style={styles}>
+          <Link className='d-link' to={`${url}/reviews`} style={linkStyles}><AddCommentRounded sx={{mb: '-5px', mr: 1}} className='sidebar-icon'/>Add a Review</Link>
+        </li>
+        <li style={styles}>
+          <Link className='d-link' to={`${url}/manage-order`} style={linkStyles}><AnalyticsRounded sx={{mb: '-5px', mr: 1}} className='sidebar-icon'/>Manage Order</Link>
+        </li>
+        <li style={styles}>
+          <Link className='d-link' to={`${url}/make-admin`} style={linkStyles}><PersonAddAlt1Rounded sx={{mb: '-5px', mr: 1}} className='sidebar-icon'/>Make Admin</Link>
+        </li>
+      </ul>
        {admin && <Box>
          </Box>}
-       {user.email && <Link className='d-link' onClick={logout}  to={''}> <LogoutRounded className='sidebar-icon'/>Logout</Link>}
+       {user.email && 
+       <li style={styles}>
+       <Link className='d-link' to={''} onClick={logout} style={linkStyles}><LogoutRounded sx={{mb: '-5px', mr: 1}} className='sidebar-icon'/>Logout</Link>
+     </li>
+       }
     </div>
   );
   const container = window !== undefined ? () => window().document.body : undefined;
