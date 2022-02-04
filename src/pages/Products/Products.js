@@ -9,7 +9,7 @@ const Products = () => {
     useEffect(() => {
         fetch('https://tranquil-hollows-86813.herokuapp.com/products')
         .then(res => res.json())
-        .then(data => setPackages(data.slice()))
+        .then(data => setPackages(data.slice(0, 6)))
     }, [])
     return (
         <Container>

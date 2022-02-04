@@ -15,6 +15,18 @@
     font-size: 20px;
     margin-bottom: 20px;
     width: 70%;
+    margin: 0 auto;
+}
+.login .google{
+    display: flex;
+    justify-content: space-around;
+}
+.login .google-icon{
+    color: #1976d2;
+    font-size: 20px;
+    border-radius: 6px;
+    background-color: white;
+    padding: 5px;
 }
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px){
