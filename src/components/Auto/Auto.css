@@ -12,6 +12,9 @@
 .floating-div .css-8ra7tr-MuiGrid-root{
     max-width: 100%;
 }
+.floating-div .css-13vuizw{
+    max-width: 100%;
+}
 
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px){

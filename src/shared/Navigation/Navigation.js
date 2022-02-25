@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import useAuth from '../../hooks/useAuth';
 import logo from '../../components/images/car-logo-car-leader.svg';
-import { LoginRounded, LogoutRounded, PersonRounded } from '@mui/icons-material';
+import { LoginRounded, LogoutRounded } from '@mui/icons-material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
