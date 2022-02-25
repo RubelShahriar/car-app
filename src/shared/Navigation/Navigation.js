@@ -15,7 +15,7 @@ const Navigation = () => {
             <Box sx={{ flexGrow: 1}}>
               <AppBar sx={{bgcolor: 'white', height: 60}} className='navigation' position="fixed">
                 <Container>
-                  <Toolbar>
+                  <Toolbar >
                     <Box className='image'><Link to='/'><img src={logo} alt=''></img></Link></Box>
                       <Box sx={{ml: 'auto'}}>
                         <Link to='/' className='nav-item'>Home</Link>
