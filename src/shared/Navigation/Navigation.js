@@ -23,9 +23,9 @@ const Navigation = () => {
                         <Link to='/dashboard' className='nav-item'>Dashboard</Link>
                         {
                           user?.email ? 
-                          <p onClick={logout} className='nav-item'>LogOut<LogoutRounded style={{marginBottom: '-5px', marginLeft: '4px'}}/></p>
+                          <p onClick={logout} className='nav-item'>LogOut<LogoutRounded className='log-icon' style={{marginBottom: '-5px', marginLeft: '4px'}}/></p>
                           :
-                          <Link to='/login' className='nav-item'>Log In<LoginRounded style={{marginBottom: '-5px'}}/></Link>
+                          <Link to='/login' className='nav-item'>Log In<LoginRounded className='log-icon' style={{marginBottom: '-5px'}}/></Link>
                         }
                       </Box>
                   </Toolbar>
