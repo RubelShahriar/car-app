@@ -37,6 +37,8 @@ const MyOrders = () => {
     }
 
     return (
+        <>
+        
         <div className='my-orders' sx={{bgColor: {xs: '#f1f1f1', sm: '#f1f1f1', md: '#f1f1f1', lg: 'white'}}}>
             <h2 style={{marginTop: '0'}}>My Orders</h2>
             <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none' }, bgcolor: '#f1f1f1' }}>
@@ -93,6 +95,12 @@ const MyOrders = () => {
                 }
             </Box>
         </div>
+        {products.length === 0 &&
+            <div >
+                <p style={{fontSize: '38px', color: 'gray', marginLeft: '50%', transform: 'translateX(-25%)'}}>OOps! No Order Yet</p>
+            </div>
+        }
+        </>
     );
 };
 
