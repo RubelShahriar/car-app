@@ -11,22 +11,20 @@
     margin: 15px auto;
 }
 .login .display{
-    font-family: 'El Messiri', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
     font-size: 20px;
     margin-bottom: 20px;
     width: 70%;
     margin: 0 auto;
 }
-.login .google{
-    display: flex;
-    justify-content: space-around;
-}
-.login .google-icon{
-    color: #1976d2;
-    font-size: 20px;
-    border-radius: 6px;
-    background-color: white;
-    padding: 5px;
+.login img{
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #1976d2;
 }
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px){
