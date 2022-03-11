@@ -61,7 +61,7 @@ const Login = () => {
                     <Button variant="contained" className='display'type='submit'>Sign In</Button>
                     </form>
                     <p>New User? Please <Link to='/resister'>Resister</Link> OR,</p>
-                    <Button sx={{ mb: 2}}  onClick={handleGoogleSignIn} className='display google' variant="contained"><img src={google} alt=''></img> Sign In With Google</Button>
+                    <Button sx={{ mb: 2}}  onClick={handleGoogleSignIn} className='display' variant="contained"><img src={google} alt=''></img> Sign In With Google</Button>
                     {isLoading && <CircularProgress />}
                     {user.email && <Alert className='input-alignment' severity="success">This is a success alert — check it out!</Alert>}
                     {errors && <Alert className='input-alignment' severity="error"><AlertTitle>{errors}</AlertTitle>This is an error alert — <strong>check it out!</strong></Alert>}

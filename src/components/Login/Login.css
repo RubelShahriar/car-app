@@ -20,7 +20,7 @@
 }
 .login img{
     width: 50px;
-    height: 100%;
+    height: calc(100% - 2px);
     position: absolute;
     top: 0;
     left: 0;
