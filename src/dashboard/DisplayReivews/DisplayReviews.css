@@ -1,52 +1,56 @@
-.reviews-item{
-    width: 80% !important;
-    border: 8px solid gainsboro;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 10px 20px;
+.display-review {
+  margin-top: var(--section-gap);
+  text-align: center;
 }
-.reviews-item:hover{
-    background-color: #1B2631;
-    transition: .4s;
+.reviews-item {
+  width: 80% !important;
+  border: 8px solid gainsboro;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
 }
-.scroll-bar::-webkit-scrollbar{
-    display: none;
+.reviews-item:hover {
+  background-color: #1b2631;
+  transition: 0.4s;
 }
-.reviews-item .text{
-    color: #566573;
-    transition: .4s;
+.scroll-bar::-webkit-scrollbar {
+  display: none;
 }
-.reviews-item .name{
-    color: #ffc107;
-    transition: .4s;
+.reviews-item .text {
+  color: var(--color-dark);
+  transition: 0.4s;
 }
-.reviews-item:hover .date{
-    color: #F0F3F4;
-    transition: .4s;
+.reviews-item .name {
+  color: var(--main-color);
+  transition: 0.4s;
 }
-.reviews-item:hover .text{
-    color: #F0F3F4;
-    transition: .4s;
+.reviews-item:hover .date {
+  color: #f0f3f4;
+  transition: 0.4s;
+}
+.reviews-item:hover .text {
+  color: #f0f3f4;
+  transition: 0.4s;
 }
 /* Responisve part css start */
-@media (min-width: 320px) and (max-width: 575px){
-    .scroll-bar{
-        height: 100px !important;
-    }
+@media (min-width: 320px) and (max-width: 575px) {
+  .scroll-bar {
+    height: 100px !important;
+  }
 }
-@media (min-width: 576px) and (max-width: 767px){
-    .background{
-        padding: 120px 0px;
-    }
-    .background .find{
-        margin-left: 40px;
-    }
+@media (min-width: 576px) and (max-width: 767px) {
+  .background {
+    padding: 120px 0px;
+  }
+  .background .find {
+    margin-left: 40px;
+  }
 }
-@media (min-width: 768px) and (max-width: 991px){
-    .background{
-        padding: 140px 0px;
-    }
-    .background .find{
-        margin-left: 140px;
-    }
+@media (min-width: 768px) and (max-width: 991px) {
+  .background {
+    padding: 140px 0px;
+  }
+  .background .find {
+    margin-left: 140px;
+  }
 }

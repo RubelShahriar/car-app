@@ -1,57 +1,57 @@
-.background{
-    background: url('../images/bannar-1.jpeg') no-repeat center;
-    background-size: cover;
-    height: 100vh;
-    text-align: center;
-    color: white;
+.background {
+  background: url("../images/bannerimage.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  color: var(--color-dark);
 }
-.background .alignment{
-    padding-top: 20%;
+.background .alignment {
+  padding-top: 14%;
 }
-.background .heading{
-    font-size: 40px;
-    width: 590px;
-    margin: 0 auto;
+.background .heading {
+  font-size: 40px;
+  width: 590px;
+  margin: 0 auto;
 }
-.background .sub-heading{
-    text-transform: uppercase;
-    font-size: 20px;
-    margin-top: 20px;
+.background .sub-heading {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 /* Responisve part css start */
-@media (min-width: 320px) and (max-width: 575px){
-    .background{
-        padding: 150px 0px;
-        height: 70vh;
-    }
-    .background .heading{
-        font-size: 30px;
-        width: auto;
-        margin-top: 20px;
-    }
-    .background .sub-heading{
-        margin-bottom: -15px;
-    }
-    .background .find{
-        margin-left: 40px;
-    }
+@media (min-width: 320px) and (max-width: 575px) {
+  .background {
+    padding: 150px 0px;
+    height: 70vh;
+  }
+  .background .heading {
+    font-size: 30px;
+    width: auto;
+    margin-top: 20px;
+  }
+  .background .sub-heading {
+    margin-bottom: -15px;
+  }
+  .background .find {
+    margin-left: 40px;
+  }
 }
-@media (min-width: 576px) and (max-width: 767px){
-    .background{
-        padding: 150px 0px;
-    }
-    .background .heading{
-        font-size: 30px;
-        width: auto;
-        margin-top: 20px;
-    }
-    .background .sub-heading{
-        margin-bottom: -15px;
-    }
-    .background .find{
-        margin-left: 40px;
-    }
+@media (min-width: 576px) and (max-width: 767px) {
+  .background {
+    padding: 150px 0px;
+  }
+  .background .heading {
+    font-size: 30px;
+    width: auto;
+    margin-top: 20px;
+  }
+  .background .sub-heading {
+    margin-bottom: -15px;
+  }
+  .background .find {
+    margin-left: 40px;
+  }
 }
-@media (min-width: 768px) and (max-width: 991px){
+@media (min-width: 768px) and (max-width: 991px) {
 }

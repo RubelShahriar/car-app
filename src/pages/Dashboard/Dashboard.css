@@ -1,88 +1,83 @@
-.dashboard{
-    font-family: 'El Messiri', sans-serif;
+.dashboard {
+  font-family: "El Messiri", sans-serif;
 }
-.dashboard .heading{
-    font-family: 'El Messiri', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
-    display: block;
+.dashboard .heading {
+  font-family: "El Messiri", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  display: block;
 }
-.dashboard li{
-    list-style: none;
-    display: block;
-    margin-bottom: 20px;
-    margin-left: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 200px !important;
-    padding: 8px 20px;
+.dashboard li {
+  list-style: none;
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px !important;
+  padding: 8px 20px;
 }
-.dashboard .d-link{
-    font-size: 18px;
-    font-weight: 600;
-    color: #34495E;
-    text-decoration: none;
-
+.dashboard .d-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: #34495e;
+  text-decoration: none;
 }
-.dashboard .d-link button:hover{
-    background: #f1f1f1;
-    transition: .4s;
+.dashboard .d-link button:hover {
+  background: #f1f1f1;
+  transition: 0.4s;
 }
-.dashboard .grid{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background-color: rgba(241, 241, 241, .9);
-    height: 85vh;
-    padding: 30px;
-    border-radius: 15px;
+.dashboard .grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: rgba(241, 241, 241, 0.9);
+  height: 85vh;
+  padding: 30px;
+  border-radius: 15px;
 }
-.dashboard .greeting{
-    font-family: 'El Messiri', sans-serif;
-    font-size: 60px;
-    font-weight: 600;
-    color: #2C3E50;
+.dashboard .greeting {
+  font-family: "El Messiri", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  color: #2c3e50;
 }
-.dashboard .dashboard-image{
-    background: url("../../components/images/dashboard.svg") no-repeat center;
-    background-size: cover;
-    height: 600px;
-    width: 100%;
-    border-radius: 10px;
+.dashboard .dashboard-image {
+  background: url("../../components/images/dashboard.svg") no-repeat center;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  border-radius: 10px;
 }
-.css-1t29gy6-MuiToolbar-root{
-    min-height: 0 !important;
+.css-1t29gy6-MuiToolbar-root {
+  min-height: 0 !important;
 }
-.dashboard .sidebar-icon{
-    margin-bottom: -5px;
-    margin-right: 10px;
+.dashboard .sidebar-icon {
+  margin-bottom: -5px;
+  margin-right: 10px;
 }
 /* Responisve part css start */
-@media (min-width: 320px) and (max-width: 575px){
-    .dashboard .grid{
+@media (min-width: 320px) and (max-width: 575px) {
+  .dashboard .grid {
     grid-template-columns: 1fr;
-
-    }
-    .dashboard .dashboard-image{
-        height: 400px;
-    }
-
+  }
+  .dashboard .dashboard-image {
+    height: 400px;
+  }
 }
-@media (min-width: 576px) and (max-width: 767px){
-    .dashboard .grid{
-        grid-template-columns: 1fr;
-    
-        }
-        .dashboard .dashboard-image{
-            height: 400px;
-        }
+@media (min-width: 576px) and (max-width: 767px) {
+  .dashboard .grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard .dashboard-image {
+    height: 400px;
+  }
 }
-@media (min-width: 768px) and (max-width: 991px){
-    .dashboard .grid{
-        grid-template-columns: 1fr;
-    
-        }
-        .dashboard .dashboard-image{
-            height: 400px;
-        }
+@media (min-width: 768px) and (max-width: 991px) {
+  .dashboard .grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard .dashboard-image {
+    height: 400px;
+  }
 }

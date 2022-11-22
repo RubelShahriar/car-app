@@ -1,101 +1,141 @@
-.add-review{
-    height: 85vh;
-    padding: 30px;
-    border-radius: 15px;
-    background-color: rgba(241, 241, 241, .9);
+.add-review-grid {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70rem;
+  margin: 0 auto;
 }
-.add-review .input{
-    font-family: 'El Messiri', sans-serif !important;
+.add-review-left {
+  width: 50%;
+  height: 76vh;
+  background-color: var(--login-color);
+  border-radius: 45px 0 60% 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
-.add-review .a-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
+.add-review-left-text {
+  text-align: center;
+  margin-top: 30px;
 }
-.add-review .a-grid .image img{
-    width: 100%;
-    height: 450px;
-    border-radius: 10px;
+.add-review-left img {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 25%;
+  left: 15%;
 }
-.add-review .textarea{
-    font-family: 'El Messiri', sans-serif;
-    font-size: 16px;
-    width: 75%;
-    height: 100px !important;
-    resize: none;
-    background-color: transparent;
-    border-radius: 5px;
-    border-color: #B3B6B7;
+.add-review-right {
+  width: 50%;
+  height: 76vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.add-review .btn{
-    font-family: 'El Messiri', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
+.add-review-input-container {
+  width: 400px;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 3px 3px 25px var(--box-shadow);
+  margin: 0 auto;
+  margin-right: auto;
+}
+.add-review-input-container input {
+  background-color: var(--input-background);
+  border: none;
+  border: 1px solid var(--input-background);
+  border-radius: var(--radius-large);
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 17px;
+  padding-left: 1.5rem;
+  font-size: 16px;
+}
+.add-review-input-container textarea {
+  font-family: "El Messiri", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  padding: 13px;
+  padding-left: 1.5rem;
+  resize: none;
+  background-color: var(--input-background);
+  border: 1px solid var(--input-background);
+  border-radius: var(--radius-large);
+}
+.add-review-input-container button {
+  cursor: pointer;
+  width: 100%;
+  height: 43px;
+  border-radius: var(--radius-large);
+  background-color: var(--login-color);
+  color: white;
+  font-size: 17px;
+  border: none;
 }
 /* Responisve part css start */
-@media (min-width: 320px) and (max-width: 575px){
-    .add-review .a-grid{
-        grid-template-columns: 1fr;
-    }
-    .add-review{
-        height: 175vh;
-    }   
-    .add-review .input{
-        width: 100% !important;
-    }
-    .add-review .a-grid .image img{
-        height: 250px;
-        margin-bottom: 20px;
-    }
-    .add-review .btn{
-        width: 100%;
-        margin-top: 10px;
-    }
-    .add-review .textarea{
-        width: 100%;
-    }   
+@media (min-width: 320px) and (max-width: 575px) {
+  .add-review .a-grid {
+    grid-template-columns: 1fr;
+  }
+  .add-review {
+    height: 175vh;
+  }
+  .add-review .input {
+    width: 100% !important;
+  }
+  .add-review .a-grid .image img {
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  .add-review .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .add-review .textarea {
+    width: 100%;
+  }
 }
-@media (min-width: 576px) and (max-width: 767px){
-    .add-review .a-grid{
-        grid-template-columns: 1fr;
-    }
-    .add-review{
-        height: 175vh;
-    }   
-    .add-review .input{
-        width: 100% !important;
-    }
-    .add-review .a-grid .image img{
-        height: 250px;
-        margin-bottom: 20px;
-    }
-    .add-review .btn{
-        width: 100%;
-        margin-top: 10px;
-    }
-    .add-review .textarea{
-        width: 100%;
-    }   
+@media (min-width: 576px) and (max-width: 767px) {
+  .add-review .a-grid {
+    grid-template-columns: 1fr;
+  }
+  .add-review {
+    height: 175vh;
+  }
+  .add-review .input {
+    width: 100% !important;
+  }
+  .add-review .a-grid .image img {
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  .add-review .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .add-review .textarea {
+    width: 100%;
+  }
 }
-@media (min-width: 768px) and (max-width: 991px){
-    .add-review .a-grid{
-        grid-template-columns: 1fr;
-    }
-    .add-review{
-        height: 175vh;
-    }   
-    .add-review .input{
-        width: 100% !important;
-    }
-    .add-review .a-grid .image img{
-        height: 250px;
-        margin-bottom: 20px;
-    }
-    .add-review .btn{
-        width: 100%;
-        margin-top: 10px;
-    }
-    .add-review .textarea{
-        width: 100%;
-    }   
+@media (min-width: 768px) and (max-width: 991px) {
+  .add-review .a-grid {
+    grid-template-columns: 1fr;
+  }
+  .add-review {
+    height: 175vh;
+  }
+  .add-review .input {
+    width: 100% !important;
+  }
+  .add-review .a-grid .image img {
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  .add-review .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .add-review .textarea {
+    width: 100%;
+  }
 }

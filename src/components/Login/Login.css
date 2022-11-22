@@ -1,71 +1,159 @@
-.login{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
+:root {
+  --input-background: #e0e0e0;
+  --login-color: #4ea685;
+  --facebook-background: #03a9f4;
+  --instagram-background: #d81b60;
+  --google-background: #c62828;
+  --twitter-background: #00bcd4;
+  --box-shadow: #9e9e9e;
 }
-.log-in-top{
-    height: 100vh;
+.login {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
 }
-.login .input-alignment{
-    width: 70%;
-    margin: 15px auto;
+.login-left {
+  width: 50%;
+  height: 90vh;
+  background-color: var(--login-color);
+  border-radius: 0 0 90% 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
-.login .display{
-    font-family: 'Open Sans', sans-serif;
-    text-transform: capitalize;
-    font-size: 20px;
-    margin-bottom: 20px;
-    width: 70%;
-    margin: 0 auto;
+.login-left-text {
+  text-align: center;
 }
-.login img{
-    width: 50px;
-    height: calc(100% - 2px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid #1976d2;
+.login-left-text h1 {
+  font-size: 60px;
 }
-/* Responisve part css start */
-@media (min-width: 320px) and (max-width: 575px){
-    .login{
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    .login .input-alignment{
-        width: 90%;
-        margin: 15px auto;
-    }
-    .login .display{
-        margin-bottom: 10px;
-        width: 90%;
-    }
+.login-left-image {
+  width: 450px;
+  height: 450px;
+  transform: translate(-50%);
+  position: absolute;
+  top: 40%;
+  left: 60%;
 }
-@media (min-width: 576px) and (max-width: 767px){
-    .login{
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    .login .input-alignment{
-        width: 90%;
-        margin: 15px auto;
-    }
-    .login .display{
-        margin-bottom: 10px;
-        width: 90%;
-    }
+.login-right {
+  width: 50%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-@media (min-width: 768px) and (max-width: 991px){
-    .login{
-        grid-template-columns: 1fr 2fr 1fr;
-        gap: 10px;
-    }
-    .login .input-alignment{
-        width: 90%;
-        margin: 15px auto;
-    }
-    .login .display{
-        margin-bottom: 10px;
-        width: 90%;
-    }
+.login-right-container-main {
+  width: 400px;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 3px 3px 25px var(--box-shadow);
+}
+.login-right-container-igroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.login-right-container-igroup-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  margin-right: 1rem;
+  font-size: 30px !important;
+  color: #616161;
+  transform: translateY(-80%);
+}
+.login-right-container-igroup .lock {
+  top: 45%;
+  font-size: 26px !important;
+}
+.login-right-container-igroup-input {
+  background-color: var(--input-background);
+  border: none;
+  border: 1px solid var(--input-background) !important;
+  border-radius: 15px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  padding-left: 3.5rem;
+  font-size: 16px;
+}
+.login-right-container-igroup-input:focus {
+  border: 1px solid var(--login-color) !important;
+}
+.login-right-container-button {
+  cursor: pointer;
+  width: 100%;
+  height: 43px;
+  border-radius: 15px;
+  background-color: var(--login-color);
+  color: white;
+  font-size: 17px;
+  border: none;
+}
+.login-google-button {
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  color: #424242;
+  border: 1px solid #424242;
+}
+.login-google-igroup {
+  position: relative;
+}
+.login-google-igroup img {
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  transform: translateY(-50%);
+  border-radius: 15px;
+  height: 35px;
+  width: 35px;
+}
+.login-right-container p {
+  text-align: center;
+  font-size: 17px;
+  line-height: 2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.login-right-icon-container {
+  width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 40px;
+  box-shadow: 3px 3px 25px var(--box-shadow);
+  background-color: #fafafa;
+}
+.login-right-icon-container i {
+  font-size: 30px;
+  background-color: var(--facebook-background);
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  margin: 0 10px;
+}
+.login-right-icon-container i:hover {
+  transform: scale(1.2);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.login-right-icon-container .fb {
+  background-color: var(--facebook-background);
+}
+.login-right-icon-container .insta {
+  background-color: var(--instagram-background);
+}
+.login-right-icon-container .ggl {
+  background-color: var(--google-background);
+}
+.login-right-icon-container .twr {
+  background-color: var(--twitter-background);
 }

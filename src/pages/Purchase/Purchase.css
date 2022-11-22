@@ -1,52 +1,89 @@
-.purchase{
-    margin-top: 100px;
-    margin-bottom: 20px;
+.purchase {
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
-.purchase .display{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+.purchase .display {
+  display: flex;
 }
-.purchase .display .left img{
-    width: 80%;
-    height: 300px;
-    border-radius: 5px;
+.purchase .left {
+  width: 50%;
+  padding: 20px;
 }
-.purchase .input{
-    width: 90%;
-    margin-bottom: 10px;
+.purchase .left p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 4px auto;
 }
-.css-1t29gy6-MuiToolbar-root{
-padding-left: 0 !important;
-    padding-right: 0 !important;
+.purchase .right {
+  width: 50%;
+}
+.purchase .display .left img {
+  width: 80%;
+  height: 300px;
+  border-radius: 5px;
+}
+.purchase .right .igroup-container {
+  display: flex;
+  justify-content: center;
+}
+.purchase .right .container-main {
+  width: 400px;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 3px 3px 25px var(--box-shadow);
+  overflow: hidden;
+}
+.purchase .right input {
+  background-color: var(--input-background);
+  border: none;
+  border: 1px solid var(--input-background) !important;
+  border-radius: 15px;
+  width: 92%;
+  padding: 15px;
+  margin-bottom: 17px;
+  font-size: 16px;
+}
+.purchase .right input:focus {
+  border: 1px solid var(--login-color) !important;
+}
+.purchase .right button {
+  cursor: pointer;
+  width: 100%;
+  height: 43px;
+  border-radius: 15px;
+  background-color: var(--login-color);
+  color: white;
+  font-size: 17px;
+  border: none;
 }
 
 /* Responisve part css start */
-@media (min-width: 320px) and (max-width: 575px){
-    .purchase .display{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .purchase .display .left img{
-        width: 100%;
-        height: 250px;
-    }
-    .purchase .para{
-        font-size: 14px !important;
-    }
+@media (min-width: 320px) and (max-width: 575px) {
+  .purchase .display {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .purchase .display .left img {
+    width: 100%;
+    height: 250px;
+  }
+  .purchase .para {
+    font-size: 14px !important;
+  }
 }
-@media (min-width: 576px) and (max-width: 767px){
-    .purchase .grid .left{
-        width: 100%;
-    }
-    .purchase .grid .right{
-        width: 100%;
-    }
+@media (min-width: 576px) and (max-width: 767px) {
+  .purchase .grid .left {
+    width: 100%;
+  }
+  .purchase .grid .right {
+    width: 100%;
+  }
 }
-@media (min-width: 768px) and (max-width: 991px){
-    .purchase .grid .left{
-        width: 60%;
-    }
-    .purchase .grid .right{
-        width: 40%;
-    }
+@media (min-width: 768px) and (max-width: 991px) {
+  .purchase .grid .left {
+    width: 60%;
+  }
+  .purchase .grid .right {
+    width: 40%;
+  }
 }
