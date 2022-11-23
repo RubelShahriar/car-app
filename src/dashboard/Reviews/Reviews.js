@@ -50,7 +50,7 @@ const Reviews = () => {
         <div className="add-review-left">
           <div className="add-review-left-text">
             <h1>Add a review😍</h1>
-            <p>
+            <p style={{ padding: "0 20px" }}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
               distinctio eligendi facilis dolore, iure eum mollitia veritatis
               eius praesentium quae facere repellendus voluptas

@@ -82,9 +82,19 @@ const ManageOrder = () => {
           }}
         >
           {!order.length ? (
-            <CircularProgress
-              style={{ marginTop: "10%", color: "var(--main-color)" }}
-            />
+            <div>
+              <p
+                style={{
+                  fontSize: "25px",
+                  color: "gray",
+                  marginTop: "20%",
+                  marginLeft: "50%",
+                  transform: "translateX(-50%)",
+                }}
+              >
+                OOps! No Orders Yet
+              </p>
+            </div>
           ) : (
             <div
               style={{
@@ -236,9 +246,19 @@ const ManageOrder = () => {
           sx={{ display: { xs: "none", sm: "none", md: "block", lg: "block" } }}
         >
           {!order.length ? (
-            <CircularProgress
-              style={{ marginTop: "10%", color: "var(--main-color)" }}
-            />
+            <div>
+              <p
+                style={{
+                  fontSize: "35px",
+                  color: "gray",
+                  marginTop: "20%",
+                  marginLeft: "50%",
+                  transform: "translateX(-50%)",
+                }}
+              >
+                OOps! No Orders Yet
+              </p>
+            </div>
           ) : (
             <table
               style={{

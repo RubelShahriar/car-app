@@ -60,7 +60,9 @@ const MyOrders = () => {
   return (
     <>
       <div className="my-orders" sx={{ backgroundColor: "var(--login-color)" }}>
-        <h2 style={{ marginBottom: "15px" }}>My Orders</h2>
+        <h2 style={{ marginBottom: "15px" }}>
+          My <span style={{ color: "var(--main-color)" }}>Orders</span>
+        </h2>
         <Box
           sx={{
             display: { xs: "block", sm: "block", md: "none", lg: "none" },
@@ -71,13 +73,14 @@ const MyOrders = () => {
             <div>
               <p
                 style={{
-                  fontSize: "38px",
+                  fontSize: "25px",
                   color: "gray",
+                  marginTop: "20%",
                   marginLeft: "50%",
-                  transform: "translateX(-25%)",
+                  transform: "translateX(-50%)",
                 }}
               >
-                OOps! No Order Yet
+                OOps! No Orders Yet
               </p>
             </div>
           ) : (
@@ -161,7 +164,7 @@ const MyOrders = () => {
                   transform: "translateX(-50%)",
                 }}
               >
-                OOps! No Order Yet
+                OOps! No Orders Yet
               </p>
             </div>
           ) : (

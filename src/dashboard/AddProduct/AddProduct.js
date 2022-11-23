@@ -48,11 +48,11 @@ const AddProduct = () => {
       <h1 style={{ textAlign: "center", marginBottom: 20 }}>
         Add a <span style={{ color: "var(--main-color)" }}>Product</span>
       </h1>
-      <div className="a-grid">
+      <div className="add-product-grid">
         <div className="add-prodcut-left">
           <div className="add-product-left-text">
             <h1>Welcome Back!</h1>
-            <p>
+            <p style={{ padding: "0 20px" }}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
               distinctio eligendi facilis dolore, iure eum mollitia veritatis
               eius praesentium quae facere repellendus voluptas

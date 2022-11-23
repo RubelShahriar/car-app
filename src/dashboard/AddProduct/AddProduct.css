@@ -1,6 +1,6 @@
-.add-product .a-grid {
+.add-product-grid {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 0 auto;
 }
 .add-prodcut-left {
@@ -24,7 +24,7 @@
   top: 25%;
   left: 15%;
 }
-.add-prodcut-right {
+.add-product-right {
   width: 50%;
   height: 76vh;
   display: flex;
@@ -63,18 +63,26 @@
 
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px) {
+  .css-1v5u2yv {
+    padding: 0px;
+  }
   .add-product .a-grid {
     display: block;
   }
   .add-prodcut-left {
     width: 100%;
     margin-bottom: 50px;
+    height: 60vh;
   }
   .add-prodcut-left img {
-    width: 360px;
-    height: 360px;
+    width: 320px;
+    height: 260px;
+    top: 40%;
   }
   .add-prodcut-right {
     width: 100%;
+  }
+  .add-product-input-container {
+    width: auto;
   }
 }

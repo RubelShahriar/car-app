@@ -20,6 +20,13 @@
   --google-color: #db4437;
   --twitter-color: #1da1f2;
   --insta-color: #e1306c;
+  --input-background: #e0e0e0;
+  --login-color: #4ea685;
+  --facebook-background: #03a9f4;
+  --instagram-background: #d81b60;
+  --google-background: #c62828;
+  --twitter-background: #00bcd4;
+  --box-shadow: #9e9e9e;
 }
 
 body {

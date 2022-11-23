@@ -141,3 +141,35 @@
 .signup-right-icon-container .twr {
   background-color: var(--twitter-background);
 }
+
+@media screen and (max-width: 440px) {
+  .signup {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .signup-left {
+    width: 100%;
+  }
+  .signup-right {
+    width: 100%;
+  }
+  .signup-left-image {
+    width: 300px;
+    height: 200px;
+  }
+  .signup-left-text h1 {
+    font-size: 40px;
+  }
+  .signup-right-container {
+    width: auto;
+  }
+  .signup-right-icon-container {
+    width: 320px;
+  }
+  .signup-right-icon-container i {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 23px;
+  }
+}
