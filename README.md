@@ -30,5 +30,6 @@ export default AuthProvider;
 ```
 
 ![Screenshot 2022-11-23 at 9 17 29 AM](https://user-images.githubusercontent.com/86913163/203485276-0d94ab0c-b207-4ecd-b6f8-8d28c0fa8327.png)
-![Screenshot 2022-11-23 at 9 20 16 AM](https://user-images.githubusercontent.com/86913163/203485281-2e9c7dab-1101-49c4-aa23-a255e4b1e847.png)
 ![Screenshot 2022-11-23 at 9 17 44 AM](https://user-images.githubusercontent.com/86913163/203485282-7641a453-de61-433b-a936-6f3c7a6b9509.png)
+![Screenshot 2022-11-23 at 9 20 16 AM](https://user-images.githubusercontent.com/86913163/203485281-2e9c7dab-1101-49c4-aa23-a255e4b1e847.png)
+
