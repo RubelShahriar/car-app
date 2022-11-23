@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
             <div className="inner">
               <LocationCityOutlined className="inner-icon"></LocationCityOutlined>
-              <p>+0477 85X6 552</p>
+              <p>+0427 85X6 568</p>
             </div>
           </div>
           <div className="subscribe">

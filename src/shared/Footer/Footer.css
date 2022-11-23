@@ -59,30 +59,16 @@
 }
 
 /* Responisve part css start */
-@media (min-width: 320px) and (max-width: 575px) {
+@media screen and (max-width: 440px) {
   .footer .flex {
     grid-template-columns: 0.8fr;
     gap: 10px;
   }
-  .footer .flex .subscribe .input {
+  .footer .flex .contact {
+    margin-left: 0px;
+  }
+  .footer .flex .contact .inner {
     margin-bottom: 10px;
-    margin-right: 5px;
-  }
-}
-@media (min-width: 576px) and (max-width: 767px) {
-  .footer .flex {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .footer .flex .subscribe .input {
-    margin-bottom: 10px;
-    margin-right: 5px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .footer .flex {
-    grid-template-columns: 1.2fr 1.2fr 0.5fr 1fr;
-    gap: 10px;
   }
   .footer .flex .subscribe .input {
     margin-bottom: 10px;

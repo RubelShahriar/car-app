@@ -1,7 +1,6 @@
 .add-review-grid {
   display: flex;
   justify-content: space-evenly;
-  width: 70rem;
   margin: 0 auto;
 }
 .add-review-left {
@@ -73,69 +72,18 @@
   border: none;
 }
 /* Responisve part css start */
-@media (min-width: 320px) and (max-width: 575px) {
-  .add-review .a-grid {
-    grid-template-columns: 1fr;
+@media screen and (max-width: 440px) {
+  .add-review-grid {
+    display: block;
   }
-  .add-review {
-    height: 175vh;
-  }
-  .add-review .input {
-    width: 100% !important;
-  }
-  .add-review .a-grid .image img {
-    height: 250px;
-    margin-bottom: 20px;
-  }
-  .add-review .btn {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .add-review .textarea {
+  .add-review-left {
     width: 100%;
   }
-}
-@media (min-width: 576px) and (max-width: 767px) {
-  .add-review .a-grid {
-    grid-template-columns: 1fr;
+  .add-review-left img {
+    width: 360px;
+    height: 360px;
   }
-  .add-review {
-    height: 175vh;
-  }
-  .add-review .input {
-    width: 100% !important;
-  }
-  .add-review .a-grid .image img {
-    height: 250px;
-    margin-bottom: 20px;
-  }
-  .add-review .btn {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .add-review .textarea {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .add-review .a-grid {
-    grid-template-columns: 1fr;
-  }
-  .add-review {
-    height: 175vh;
-  }
-  .add-review .input {
-    width: 100% !important;
-  }
-  .add-review .a-grid .image img {
-    height: 250px;
-    margin-bottom: 20px;
-  }
-  .add-review .btn {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .add-review .textarea {
+  .add-review-right {
     width: 100%;
   }
 }

@@ -33,5 +33,15 @@ body {
 }
 a {
   text-decoration: none;
+  color: var(--color-dark);
+}
+
+.anchor-text {
   color: var(--main-color);
+}
+
+@media screen and (max-width: 440px) {
+  :root {
+    --section-gap: 80px;
+  }
 }

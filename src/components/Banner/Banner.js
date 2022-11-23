@@ -4,7 +4,7 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div className="background">
+    <div className="banner-component">
       <Container>
         <div className="alignment">
           <small style={{ marginBottom: "30px" }}>FIND YOUR DREAM CAR</small>

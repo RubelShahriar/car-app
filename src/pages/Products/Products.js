@@ -29,61 +29,61 @@ const Products = () => {
         ) : (
           <div className="display">
             {packages.map((packages, i) => (
-              <div className="item" key={i}>
-                <div className="image">
-                  <img
-                    src={`data:image/png;base64,${packages.image}`}
-                    alt=""
-                  ></img>
-                </div>
-                <div className="car-info">
-                  <h4 style={{ marginTop: 0, fontWeight: 500 }}>
-                    Brand: {packages.productName}
-                  </h4>
-                  <div
-                    style={{
-                      display: "flex",
-                      fontSize: "16px",
-                      margin: "7px 0",
-                    }}
-                  >
-                    <p>
-                      <LocationOn
-                        className="icon"
-                        style={{ marginLeft: "-7px ", marginRight: "-6" }}
-                      />{" "}
-                      {packages.place}
-                    </p>
-                    <p style={{ marginLeft: "10px" }}>
-                      <EventNoteRounded className="icon" />
-                      Model: {packages.versionYear}
-                    </p>
+              <Link to={`/purchase/${packages._id}`}>
+                <div className="item" key={i}>
+                  <div className="image">
+                    <img
+                      src={`data:image/png;base64,${packages.image}`}
+                      alt=""
+                    ></img>
                   </div>
-                  <p style={{ fontSize: "16px" }}>
-                    Price: ${packages.originalPrice} -
-                    <span
+                  <div className="car-info">
+                    <h4 style={{ marginTop: 0, fontWeight: 500 }}>
+                      Brand: {packages.productName}
+                    </h4>
+                    <div
                       style={{
-                        textDecoration: "line-through 2px",
-                        color: "gray",
-                        fontWeight: "bold",
+                        display: "flex",
+                        fontSize: "16px",
+                        margin: "7px 0",
                       }}
                     >
-                      ${packages.discountPrice}
-                    </span>
-                  </p>
-                  <div style={{ marginTop: "10px" }}>
-                    <Link
-                      style={{ marginRight: "15px" }}
-                      to={`/purchase/${packages._id}`}
-                    >
-                      <button>Details</button>
-                    </Link>
-                    <Link to={`/purchase/${packages._id}`}>
+                      <p>
+                        <LocationOn
+                          className="icon"
+                          style={{ marginLeft: "-7px ", marginRight: "-6" }}
+                        />{" "}
+                        {packages.place}
+                      </p>
+                      <p style={{ marginLeft: "10px" }}>
+                        <EventNoteRounded className="icon" />
+                        Model: {packages.versionYear}
+                      </p>
+                    </div>
+                    <p style={{ fontSize: "16px" }}>
+                      Price: ${packages.originalPrice} -
+                      <span
+                        style={{
+                          textDecoration: "line-through 2px",
+                          color: "gray",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        ${packages.discountPrice}
+                      </span>
+                    </p>
+                    <div style={{ marginTop: "10px" }}>
+                      <Link
+                        style={{ marginRight: "15px" }}
+                        to={`/purchase/${packages._id}`}
+                      >
+                        <button>Details</button>
+                      </Link>
                       <button>Purchase</button>
-                    </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}

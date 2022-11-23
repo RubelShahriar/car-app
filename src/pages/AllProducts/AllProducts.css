@@ -53,6 +53,13 @@
   transition: 0.4s;
 }
 
+.all-products-button {
+  margin-top: 15px;
+}
+.all-products-button button {
+  margin-right: 10px;
+}
+
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px) {
   .all-products .display {

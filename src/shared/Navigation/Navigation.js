@@ -1,23 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { Box } from "@mui/system";
 import useAuth from "../../hooks/useAuth";
 import logo from "../../components/images/icons8.png";
 import "./Navigation.css";
 import { Container } from "@mui/material";
 import { useState } from "react";
-import { useRef } from "react";
 
 const Navigation = () => {
   const { user, logout } = useAuth();
-  const [showSiebar, setShowSidebar] = useState(false);
-  const navigationbarRightRef = useRef(null);
+  const [showSidebar, setShowSidebar] = useState(false);
 
-  const addActivebackground = (e) => {
-    const a = navigationbarRightRef.current.childNodes;
-    for (let i = 0; i < a.length; i++) {
-      a[i].className = "";
+  const styles = { display: !showSidebar && "none" };
+
+  const sidebarFunc = () => {
+    if (showSidebar) {
+      setShowSidebar(false);
+    } else {
+      setShowSidebar(true);
     }
-    e.target.className = "navigationbar-right-active";
   };
 
   return (
@@ -25,38 +26,48 @@ const Navigation = () => {
       <Container>
         <div className="navigationbar-flex">
           <div className="navigationbar-left">
-            <Link to="/">
-              <img src={logo} alt="navigationbarlogo" />{" "}
-              <span className="navigationbar-logo-span">CAR</span>SHOP
-            </Link>
-            <i className="bx bx-menu navigationbar-menu-icon"></i>
+            <NavLink to="/">
+              <img src={logo} alt="navigationbarlogo" />
+              CAR<span className="anchor-text">SHOP</span>
+            </NavLink>
+            <i
+              className="bx bx-menu navigationbar-menu-icon"
+              onClick={sidebarFunc}
+            ></i>
           </div>
-          <div className="navigationbar-right" ref={navigationbarRightRef}>
-            <Link
-              to="/"
-              className="navigationbar-right-active"
-              onClick={(e) => addActivebackground(e)}
-            >
+          <Box
+            className="navigationbar-right"
+            sx={{ display: { xs: !showSidebar && "none", md: "flex" } }}
+          >
+            <NavLink exact activeClassName="navigationbar-right-active" to="/">
               Home
-            </Link>
-            <Link to="/all-products" onClick={(e) => addActivebackground(e)}>
+            </NavLink>
+            <NavLink
+              exact
+              activeClassName="navigationbar-right-active"
+              to="/all-products"
+            >
               Products
-            </Link>
-            <Link to="/dashboard" onClick={(e) => addActivebackground(e)}>
+            </NavLink>
+            <NavLink
+              exact
+              activeClassName="navigationbar-right-active"
+              to="/dashboard"
+            >
               Dashboard
-            </Link>
+            </NavLink>
             {user?.email ? (
               <Link onClick={logout}>
-                Logout{" "}
+                Logout
                 <i className="bx bx-log-out-circle navigationbar-right-icon"></i>
               </Link>
             ) : (
               <Link to="/login">
-                Login{" "}
+                Login
                 <i className="bx bx-log-in-circle navigationbar-right-icon"></i>
               </Link>
             )}
-          </div>
+          </Box>
         </div>
       </Container>
     </div>

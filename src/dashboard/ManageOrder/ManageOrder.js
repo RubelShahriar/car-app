@@ -74,7 +74,7 @@ const ManageOrder = () => {
   return (
     <div>
       <div className="orders">
-        <h2 style={{ marginTop: "0" }}>Manage All Orders</h2>
+        <h2 style={{ marginBottom: "15px" }}>Manage All Orders</h2>
         <Box
           sx={{
             display: { xs: "block", sm: "block", md: "none", lg: "none" },
@@ -236,7 +236,9 @@ const ManageOrder = () => {
           sx={{ display: { xs: "none", sm: "none", md: "block", lg: "block" } }}
         >
           {!order.length ? (
-            <CircularProgress style={{ marginTop: "10%" }} />
+            <CircularProgress
+              style={{ marginTop: "10%", color: "var(--main-color)" }}
+            />
           ) : (
             <table
               style={{

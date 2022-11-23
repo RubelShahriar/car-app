@@ -87,7 +87,7 @@ const Purchase = () => {
                 style={{
                   backgroundColor: "var(--main-color)",
                   marginTop: "10px",
-                  padding: "10px",
+                  padding: "7px 10px",
                   borderRadius: "6px",
                   color: "white",
                   display: "inline-block",

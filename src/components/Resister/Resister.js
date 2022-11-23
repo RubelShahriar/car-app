@@ -15,6 +15,8 @@ const Resister = () => {
 
   const getInputValue = (e) => {
     const field = e.target.name;
+    console.log(field);
+
     const value = e.target.value;
     const newInputData = { ...inputData };
     newInputData[field] = value;
@@ -23,6 +25,7 @@ const Resister = () => {
   };
 
   const handleResisterSubmit = (e) => {
+    e.preventDefault();
     if (inputData.password !== inputData.password2) {
       alert("Your password didn't matched");
       return;
@@ -34,7 +37,6 @@ const Resister = () => {
       history
     );
     e.target.value = "";
-    e.preventDefault();
   };
 
   return (
@@ -51,9 +53,9 @@ const Resister = () => {
                     className="signup-right-container-igroup-input"
                     onBlur={getInputValue}
                     name="name"
-                    label="Email"
                     type="text"
                     placeholder="Name"
+                    required
                   />
                 </div>
                 <div className="signup-right-container-igroup">
@@ -62,9 +64,9 @@ const Resister = () => {
                     className="signup-right-container-igroup-input"
                     onBlur={getInputValue}
                     name="email"
-                    label="Email"
                     type="email"
                     placeholder="Email"
+                    required
                   />
                 </div>
                 <div className="signup-right-container-igroup">
@@ -72,10 +74,10 @@ const Resister = () => {
                   <input
                     className="signup-right-container-igroup-input"
                     onBlur={getInputValue}
-                    name="email"
-                    label="Email"
+                    name="password"
                     type="password"
                     placeholder="password"
+                    required
                   />
                 </div>
                 <div className="signup-right-container-igroup">
@@ -83,10 +85,10 @@ const Resister = () => {
                   <input
                     className="signup-right-container-igroup-input"
                     onBlur={getInputValue}
-                    name="email"
-                    label="Email"
+                    name="password2"
                     type="password"
                     placeholder="re-enter password"
+                    required
                   />
                 </div>
                 <button type="submit" className="signup-right-container-button">
@@ -95,9 +97,9 @@ const Resister = () => {
               </form>
             )}
             <p>
-              Already have an Accout? please{" "}
+              Already have an Accout? please
               <Link to="/login" style={{ textDecoration: "none" }}>
-                Log in
+                <span className="anchor-text"> Log in</span>
               </Link>
             </p>
             <div style={{ display: "flex", justifyContent: "center" }}>

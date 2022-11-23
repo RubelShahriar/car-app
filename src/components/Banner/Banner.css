@@ -1,57 +1,35 @@
-.background {
+.banner-component {
   background: url("../images/bannerimage.jpg") no-repeat center;
   background-size: cover;
   height: 100vh;
   text-align: center;
   color: var(--color-dark);
 }
-.background .alignment {
+.banner-component .alignment {
   padding-top: 14%;
+  text-align: center;
 }
-.background .heading {
+.banner-component .heading {
   font-size: 40px;
   width: 590px;
   margin: 0 auto;
 }
-.background .sub-heading {
+.banner-component .sub-heading {
   text-transform: uppercase;
   font-size: 20px;
   margin-top: 20px;
 }
 
 /* Responisve part css start */
-@media (min-width: 320px) and (max-width: 575px) {
-  .background {
-    padding: 150px 0px;
-    height: 70vh;
+@media screen and (max-width: 440px) {
+  .banner-component .alignment {
+    padding-top: 28%;
   }
-  .background .heading {
+  .banner-component .heading {
     font-size: 30px;
-    width: auto;
-    margin-top: 20px;
+    width: 390px;
   }
-  .background .sub-heading {
-    margin-bottom: -15px;
+  .banner-component .sub-heading {
+    font-style: 16px;
   }
-  .background .find {
-    margin-left: 40px;
-  }
-}
-@media (min-width: 576px) and (max-width: 767px) {
-  .background {
-    padding: 150px 0px;
-  }
-  .background .heading {
-    font-size: 30px;
-    width: auto;
-    margin-top: 20px;
-  }
-  .background .sub-heading {
-    margin-bottom: -15px;
-  }
-  .background .find {
-    margin-left: 40px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
 }

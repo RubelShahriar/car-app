@@ -1,7 +1,6 @@
 .add-product .a-grid {
   display: flex;
   justify-content: space-evenly;
-  width: 70rem;
   margin: 0 auto;
 }
 .add-prodcut-left {
@@ -65,49 +64,17 @@
 /* Responisve part css start */
 @media (min-width: 320px) and (max-width: 575px) {
   .add-product .a-grid {
-    grid-template-columns: 1fr;
+    display: block;
   }
-  .add-product .a-grid .image img {
-    margin-bottom: 20px;
-    height: 250px;
-  }
-  .add-product {
-    height: 185vh;
-  }
-  .add-product .input {
+  .add-prodcut-left {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
   }
-}
-@media (min-width: 576px) and (max-width: 767px) {
-  .add-product .a-grid {
-    grid-template-columns: 1fr;
+  .add-prodcut-left img {
+    width: 360px;
+    height: 360px;
   }
-  .add-product .a-grid .image img {
-    margin-bottom: 20px;
-    height: 250px;
-  }
-  .add-product {
-    height: 185vh;
-  }
-  .add-product .input {
+  .add-prodcut-right {
     width: 100%;
-    margin-bottom: 15px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .add-product .a-grid {
-    grid-template-columns: 1fr;
-  }
-  .add-product .a-grid .image img {
-    margin-bottom: 20px;
-    height: 250px;
-  }
-  .add-product {
-    height: 185vh;
-  }
-  .add-product .input {
-    width: 100%;
-    margin-bottom: 15px;
   }
 }

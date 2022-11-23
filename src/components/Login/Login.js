@@ -78,10 +78,10 @@ const Login = () => {
               </button>
             </form>
             <p>
-              New User? Please{" "}
+              New User? Please
               <Link to="/resister" style={{ textDecoration: "none" }}>
-                Sign up
-              </Link>{" "}
+                <span className="anchor-text"> Sign up </span>
+              </Link>
               OR,
             </p>
             <div className="login-google-igroup">

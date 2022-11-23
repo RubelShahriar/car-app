@@ -29,9 +29,9 @@ import {
 } from "@mui/icons-material";
 import { Badge } from "@mui/material";
 
-//drawer width
+// drawer width
 const drawerWidth = 240;
-
+// component
 function Dashboard(props) {
   const { admin, user, logout } = useAuth();
   let { path, url } = useRouteMatch();
@@ -59,9 +59,9 @@ function Dashboard(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+  // drawer background : "#1976d2"
   const drawer = (
-    <div style={{ height: "100vh", background: "#1976d2" }}>
-      <Toolbar />
+    <div style={{ height: "100vh", background: "var(--login-color)" }}>
       <Box style={{ textAlign: "center" }}>
         <p
           style={{
@@ -71,7 +71,7 @@ function Dashboard(props) {
             fontSize: "30px",
           }}
         >
-          CaLeader
+          CarDealer
         </p>
       </Box>
       <Divider />
@@ -183,6 +183,7 @@ function Dashboard(props) {
           sx={{
             width: { sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
+            backgroundColor: "var(--login-color)",
           }}
         >
           <Toolbar>
@@ -203,7 +204,6 @@ function Dashboard(props) {
           sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
           aria-label="mailbox folders"
         >
-          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <Drawer
             container={container}
             variant="temporary"
