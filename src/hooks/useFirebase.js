@@ -114,8 +114,7 @@ const useFirebase = () => {
   }, [auth]);
 
   useEffect(() => {
-    fetch(`https://tranquil-hollows-86813.herokuapp.com/users/${user.email}`)
-      // fetch(`https://tranquil-hollows-86813.herokuapp.com/users`)
+    fetch(`https://carzone-server.onrender.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -134,7 +133,7 @@ const useFirebase = () => {
 
   const saveUserToDatabse = (displayName, email, method) => {
     const user = { displayName, email };
-    fetch("https://tranquil-hollows-86813.herokuapp.com/users", {
+    fetch("https://carzone-server.onrender.com/users", {
       method: method,
       headers: {
         "content-type": "application/json",

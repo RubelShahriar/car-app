@@ -24,7 +24,7 @@ const Reviews = () => {
       dateString,
     };
 
-    fetch("https://tranquil-hollows-86813.herokuapp.com/reviews", {
+    fetch("https://carzone-server.onrender.com/reviews", {
       method: "post",
       headers: {
         "content-type": "application/json",

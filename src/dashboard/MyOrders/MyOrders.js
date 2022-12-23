@@ -27,7 +27,7 @@ const MyOrders = () => {
   useEffect(() => {
     async function fetchData() {
       await fetch(
-        `https://tranquil-hollows-86813.herokuapp.com/orderedItem?email=${user.email}`
+        `https://carzone-server.onrender.com/orderedItem?email=${user.email}`
       )
         .then((res) => res.json())
         .then((data) => setproducts(data));
@@ -40,7 +40,7 @@ const MyOrders = () => {
       "Are you sure, you want to delete this order?"
     );
     if (confirmation) {
-      const url = `https://tranquil-hollows-86813.herokuapp.com/orderedItem/${id}`;
+      const url = `https://carzone-server.onrender.com/orderedItem/${id}`;
       fetch(url, {
         method: "delete",
       })

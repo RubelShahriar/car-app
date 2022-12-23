@@ -48,9 +48,7 @@ function Dashboard(props) {
   const linkStyles = { textDecoration: "none", color: "#34495E" };
   const [packages, setPackages] = React.useState([]);
   React.useEffect(() => {
-    fetch(
-      `https://tranquil-hollows-86813.herokuapp.com/orderedItem?email=${user.email}`
-    )
+    fetch(`https://carzone-server.onrender.com/orderedItem?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setPackages(data));
   }, [packages, user.email]);

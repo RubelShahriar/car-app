@@ -11,8 +11,6 @@ const Navigation = () => {
   const { user, logout } = useAuth();
   const [showSidebar, setShowSidebar] = useState(false);
 
-  const styles = { display: !showSidebar && "none" };
-
   const sidebarFunc = () => {
     if (showSidebar) {
       setShowSidebar(false);

@@ -4,7 +4,7 @@ import {
   DeleteForeverRounded,
   PersonRounded,
 } from "@mui/icons-material";
-import { Box, CircularProgress } from "@mui/material";
+import { Box } from "@mui/material";
 import "./ManageOrder.css";
 
 const ManageOrder = () => {
@@ -38,7 +38,7 @@ const ManageOrder = () => {
     padding: "0px 2px",
   };
   useEffect(() => {
-    fetch("https://tranquil-hollows-86813.herokuapp.com/orderedItem")
+    fetch("https://carzone-server.onrender.com/orderedItem")
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, []);
@@ -54,7 +54,7 @@ const ManageOrder = () => {
       "Are you sure, you want to delete this order?"
     );
     if (confirmation) {
-      const url = `https://tranquil-hollows-86813.herokuapp.com/orderedItem/${id}`;
+      const url = `https://carzone-server.onrender.com/orderedItem/${id}`;
       fetch(url, {
         method: "delete",
       })

@@ -18,7 +18,7 @@ const Purchase = () => {
   const [country, setCountry] = useState("");
   const [postalCode, setPostalCode] = useState("");
   useEffect(() => {
-    const url = `https://tranquil-hollows-86813.herokuapp.com/products/${id}`;
+    const url = `https://carzone-server.onrender.com/products/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setCarInfo(data));
@@ -38,7 +38,7 @@ const Purchase = () => {
       postalCode,
       dateString,
     };
-    fetch("https://tranquil-hollows-86813.herokuapp.com/orderedItem", {
+    fetch("https://carzone-server.onrender.com/orderedItem", {
       method: "post",
       headers: {
         "content-type": "application/json",

@@ -71,6 +71,7 @@
   font-size: 16px;
 }
 .login-right-container-igroup-input:focus {
+  outline: none;
   border: 1px solid var(--login-color) !important;
 }
 .login-right-container-button {

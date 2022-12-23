@@ -27,7 +27,7 @@ const AddProduct = () => {
     formData.append("versionYear", versionYear);
     formData.append("description", description);
     //fetch car api
-    fetch("https://tranquil-hollows-86813.herokuapp.com/products", {
+    fetch("https://carzone-server.onrender.com/products", {
       method: "POST",
       body: formData,
     })

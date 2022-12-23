@@ -3,7 +3,7 @@
   background-size: cover;
   height: 100vh;
   text-align: center;
-  color: var(--login-color);
+  color: var(--main-color);
 }
 .banner-component .alignment {
   padding-top: 14%;

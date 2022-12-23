@@ -8,7 +8,7 @@ import "./AllProducts.css";
 const AllProducts = () => {
   const [packages, setPackages] = useState([]);
   useEffect(() => {
-    fetch("https://tranquil-hollows-86813.herokuapp.com/products")
+    fetch("https://carzone-server.onrender.com/products")
       .then((res) => res.json())
       .then((data) => setPackages(data));
   }, []);

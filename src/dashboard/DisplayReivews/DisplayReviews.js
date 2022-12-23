@@ -55,7 +55,7 @@ const DisplayReviews = () => {
   //review part
   const [review, setReview] = useState([]);
   useEffect(() => {
-    fetch("https://tranquil-hollows-86813.herokuapp.com/reviews")
+    fetch("https://carzone-server.onrender.com/reviews")
       .then((res) => res.json())
       .then((data) => setReview(data));
   }, []);
